@@ -1,0 +1,22 @@
+{
+  "design": "feasibility",
+  "design_note": "Feasibility deviation: 135 SWE-bench+ census + 200 EvalPlus-only; not the registered 900-paper sample.",
+  "frame": "data/citation_frame_2666.csv",
+  "frame_sha256": "6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c",
+  "seed": 20261113,
+  "osf_doi": null,
+  "sampled_utc": "2026-11-13T15:30:07.267813+00:00",
+  "population": {
+    "EvalPlus_only_sample": 2531,
+    "SWE_bench_plus_census": 135
+  },
+  "sample": {
+    "swe_bench_plus_census": 135,
+    "evalplus_only_sample": 200,
+    "total": 335
+  },
+  "design_weight": {
+    "swe_bench_plus_census": 1.0,
+    "evalplus_only_sample": 12.655
+  }
+}

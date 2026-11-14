@@ -1,0 +1,36 @@
+{
+  "generated_utc": "2026-11-13",
+  "source": "Semantic Scholar Graph API citations to arXiv:2305.01210 (EvalPlus) and arXiv:2410.06992 (SWE-bench+)",
+  "identifier_dedup_rows": 2684,
+  "title_clusters": 2666,
+  "strata": {
+    "EvalPlus_only_sample": 2531,
+    "SWE_bench_plus_census": 135
+  },
+  "cites_combinations": {
+    "evalplus": 2531,
+    "swebenchplus": 112,
+    "evalplus+swebenchplus": 23
+  },
+  "years": {
+    "2022": 2,
+    "2023": 119,
+    "2024": 526,
+    "2025": 838,
+    "2026": 1139,
+    "unknown": 42
+  },
+  "identifier_coverage": {
+    "doi": 2313,
+    "arxiv": 2028,
+    "dblp": 2129,
+    "no_doi_arxiv_dblp": 42
+  },
+  "no_publication_date": 225,
+  "publication_date_after_2026_09_30": 231,
+  "multi_variant_clusters": 14,
+  "sha256": {
+    "citation_frame_source": "46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72",
+    "citation_frame_2666_csv": "6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c"
+  }
+}

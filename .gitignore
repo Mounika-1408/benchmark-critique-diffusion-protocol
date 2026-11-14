@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Research materials that must not be redistributed
+*.pdf
+*.PDF
+data/pdfs/
+data/fulltexts/
+data/cohort_arxiv_metadata.csv
+data/*.pdf
+pilot/fulltexts/
+pilot/pdfs/
+
+# Local retrieval and temporary files
+tmp/
+temp/
+*.tmp
+*.log
+.cache/
+.semantic_scholar/
+*.sqlite
+*.db
+
+# Credentials and private configuration
+.env
+.env.*
+secrets/
+credentials/
+*.pem
+*.key
+api_keys.*
+
+# Build and archives
+dist/
+build/
+*.zip
+*.7z
+*.tar.gz
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.out
+*.toc

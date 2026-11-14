@@ -1,0 +1,10 @@
+# Normalize text files to LF so SHA-256 checksums are stable across platforms.
+* text=auto eol=lf
+
+*.svg text
+*.csv text
+*.json text
+*.md text
+*.py text
+*.bib text
+*.sha256 text

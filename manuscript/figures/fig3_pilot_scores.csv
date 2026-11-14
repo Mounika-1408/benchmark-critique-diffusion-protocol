@@ -1,0 +1,9 @@
+group,score,label,n,share
+Primary pairs (n=6),0,Citation only,2,0.3333
+Primary pairs (n=6),1,Acknowledged,3,0.5000
+Primary pairs (n=6),2,Partial,0,0.0000
+Primary pairs (n=6),3,Full,1,0.1667
+All pairs (n=8),0,Citation only,3,0.3750
+All pairs (n=8),1,Acknowledged,4,0.5000
+All pairs (n=8),2,Partial,0,0.0000
+All pairs (n=8),3,Full,1,0.1250

@@ -1,0 +1,326 @@
+{
+  "generated_utc": "2026-11-13T15:55:53.613872+00:00",
+  "source": {
+    "pilot_coding_table": "pilot\\pilot_coding_table.csv",
+    "pilot_coding_table_sha256": "5bf96b3e0567dbe6a764898f54654cd3d917697b0a50dfe4e187ded3c7c3db74",
+    "pilot_summary": "pilot/pilot_summary.md",
+    "note": "Purposive pilot, not a probability sample; no population prevalence is estimated."
+  },
+  "flow": {
+    "purposive_frame": 29,
+    "full_text_accessible": 27,
+    "coded": 12,
+    "eligible_all_pairs": 8,
+    "eligible_primary_pairs": 6,
+    "ineligible": 4
+  },
+  "coded_rows": 12,
+  "eligible_rows": 8,
+  "primary_pair_rows": 6,
+  "ineligible_rows": 4,
+  "ineligibility_reasons": {
+    "NO_EVAL": 4
+  },
+  "primary_pair": {
+    "n_eligible": 6,
+    "score_distribution": {
+      "0": 2,
+      "1": 3,
+      "2": 0,
+      "3": 1
+    },
+    "score_share": {
+      "0": 0.3333333333333333,
+      "1": 0.5,
+      "2": 0.0,
+      "3": 0.16666666666666666
+    },
+    "full_adoption_k": 1,
+    "full_adoption": 0.16666666666666666,
+    "wilson_95_ci": [
+      0.030053369748306635,
+      0.5635028221864702
+    ],
+    "acknowledged_or_better_k": 4,
+    "acknowledged_or_better": 0.6666666666666666,
+    "partial_or_full_k": 1,
+    "partial_or_full": 0.16666666666666666,
+    "citation_only_k": 2,
+    "acknowledged_k": 3,
+    "partial_k": 0,
+    "independent_remediation_k": 3,
+    "independent_remediation_share": 0.5,
+    "engagement_distribution": {
+      "0": 2,
+      "1": 1,
+      "2": 3
+    },
+    "exact_binomial_diagnostic": {
+      "h1_p_value_full_adoption_below_0_25": 0.533935546875,
+      "h3_p_value_zero_or_one_above_0_50": 0.109375,
+      "status": "descriptive only; the pilot is too small for confirmatory inference"
+    }
+  },
+  "all_pair": {
+    "n_eligible": 8,
+    "score_distribution": {
+      "0": 3,
+      "1": 4,
+      "2": 0,
+      "3": 1
+    },
+    "score_share": {
+      "0": 0.375,
+      "1": 0.5,
+      "2": 0.0,
+      "3": 0.125
+    },
+    "full_adoption_k": 1,
+    "full_adoption": 0.125,
+    "wilson_95_ci": [
+      0.02241749145005667,
+      0.4708881822128535
+    ],
+    "acknowledged_or_better_k": 5,
+    "acknowledged_or_better": 0.625,
+    "partial_or_full_k": 1,
+    "partial_or_full": 0.125,
+    "citation_only_k": 3,
+    "acknowledged_k": 4,
+    "partial_k": 0,
+    "independent_remediation_k": 4,
+    "independent_remediation_share": 0.5,
+    "engagement_distribution": {
+      "0": 3,
+      "1": 2,
+      "2": 3
+    },
+    "exact_binomial_diagnostic": {
+      "h1_p_value_full_adoption_below_0_25": 0.3670806884765625,
+      "h3_p_value_zero_or_one_above_0_50": 0.03515625,
+      "status": "descriptive only; the pilot is too small for confirmatory inference"
+    }
+  },
+  "by_critique": {
+    "evalplus": {
+      "n_eligible": 3,
+      "score_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 0,
+        "3": 1
+      },
+      "score_share": {
+        "0": 0.3333333333333333,
+        "1": 0.3333333333333333,
+        "2": 0.0,
+        "3": 0.3333333333333333
+      },
+      "full_adoption_k": 1,
+      "full_adoption": 0.3333333333333333,
+      "wilson_95_ci": [
+        0.06149194472039621,
+        0.7923403991979522
+      ],
+      "acknowledged_or_better_k": 2,
+      "acknowledged_or_better": 0.6666666666666666,
+      "partial_or_full_k": 1,
+      "partial_or_full": 0.3333333333333333,
+      "citation_only_k": 1,
+      "acknowledged_k": 1,
+      "partial_k": 0,
+      "independent_remediation_k": 0,
+      "independent_remediation_share": 0.0,
+      "engagement_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 1
+      },
+      "exact_binomial_diagnostic": {
+        "h1_p_value_full_adoption_below_0_25": 0.84375,
+        "h3_p_value_zero_or_one_above_0_50": 0.5,
+        "status": "descriptive only; the pilot is too small for confirmatory inference"
+      }
+    },
+    "gsm1k": {
+      "n_eligible": 2,
+      "score_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 0,
+        "3": 0
+      },
+      "score_share": {
+        "0": 0.5,
+        "1": 0.5,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "full_adoption_k": 0,
+      "full_adoption": 0.0,
+      "wilson_95_ci": [
+        0.0,
+        0.6576197724933469
+      ],
+      "acknowledged_or_better_k": 1,
+      "acknowledged_or_better": 0.5,
+      "partial_or_full_k": 0,
+      "partial_or_full": 0.0,
+      "citation_only_k": 1,
+      "acknowledged_k": 1,
+      "partial_k": 0,
+      "independent_remediation_k": 1,
+      "independent_remediation_share": 0.5,
+      "engagement_distribution": {
+        "0": 1,
+        "1": 1,
+        "2": 0
+      },
+      "exact_binomial_diagnostic": {
+        "h1_p_value_full_adoption_below_0_25": 0.5625,
+        "h3_p_value_zero_or_one_above_0_50": 0.25,
+        "status": "descriptive only; the pilot is too small for confirmatory inference"
+      }
+    },
+    "swebenchplus": {
+      "n_eligible": 3,
+      "score_distribution": {
+        "0": 1,
+        "1": 2,
+        "2": 0,
+        "3": 0
+      },
+      "score_share": {
+        "0": 0.3333333333333333,
+        "1": 0.6666666666666666,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "full_adoption_k": 0,
+      "full_adoption": 0.0,
+      "wilson_95_ci": [
+        5.551115123125783e-17,
+        0.5614970317550454
+      ],
+      "acknowledged_or_better_k": 2,
+      "acknowledged_or_better": 0.6666666666666666,
+      "partial_or_full_k": 0,
+      "partial_or_full": 0.0,
+      "citation_only_k": 1,
+      "acknowledged_k": 2,
+      "partial_k": 0,
+      "independent_remediation_k": 3,
+      "independent_remediation_share": 1.0,
+      "engagement_distribution": {
+        "0": 1,
+        "1": 0,
+        "2": 2
+      },
+      "exact_binomial_diagnostic": {
+        "h1_p_value_full_adoption_below_0_25": 0.421875,
+        "h3_p_value_zero_or_one_above_0_50": 0.125,
+        "status": "descriptive only; the pilot is too small for confirmatory inference"
+      }
+    }
+  },
+  "by_year": {
+    "2025": {
+      "n_eligible": 7,
+      "score_distribution": {
+        "0": 3,
+        "1": 3,
+        "2": 0,
+        "3": 1
+      },
+      "score_share": {
+        "0": 0.42857142857142855,
+        "1": 0.42857142857142855,
+        "2": 0.0,
+        "3": 0.14285714285714285
+      },
+      "full_adoption_k": 1,
+      "full_adoption": 0.14285714285714285,
+      "wilson_95_ci": [
+        0.02567962434474355,
+        0.5131278292743189
+      ],
+      "acknowledged_or_better_k": 4,
+      "acknowledged_or_better": 0.5714285714285714,
+      "partial_or_full_k": 1,
+      "partial_or_full": 0.14285714285714285,
+      "citation_only_k": 3,
+      "acknowledged_k": 3,
+      "partial_k": 0,
+      "independent_remediation_k": 3,
+      "independent_remediation_share": 0.42857142857142855,
+      "engagement_distribution": {
+        "0": 3,
+        "1": 2,
+        "2": 2
+      },
+      "exact_binomial_diagnostic": {
+        "h1_p_value_full_adoption_below_0_25": 0.4449462890625,
+        "h3_p_value_zero_or_one_above_0_50": 0.0625,
+        "status": "descriptive only; the pilot is too small for confirmatory inference"
+      }
+    },
+    "unknown": {
+      "n_eligible": 1,
+      "score_distribution": {
+        "0": 0,
+        "1": 1,
+        "2": 0,
+        "3": 0
+      },
+      "score_share": {
+        "0": 0.0,
+        "1": 1.0,
+        "2": 0.0,
+        "3": 0.0
+      },
+      "full_adoption_k": 0,
+      "full_adoption": 0.0,
+      "wilson_95_ci": [
+        0.0,
+        0.7934506856227626
+      ],
+      "acknowledged_or_better_k": 1,
+      "acknowledged_or_better": 1.0,
+      "partial_or_full_k": 0,
+      "partial_or_full": 0.0,
+      "citation_only_k": 0,
+      "acknowledged_k": 1,
+      "partial_k": 0,
+      "independent_remediation_k": 1,
+      "independent_remediation_share": 1.0,
+      "engagement_distribution": {
+        "0": 0,
+        "1": 0,
+        "2": 1
+      },
+      "exact_binomial_diagnostic": {
+        "h1_p_value_full_adoption_below_0_25": 0.75,
+        "h3_p_value_zero_or_one_above_0_50": 0.5,
+        "status": "descriptive only; the pilot is too small for confirmatory inference"
+      }
+    }
+  },
+  "reliability": {
+    "type": "LLM-LLM agreement; not human inter-rater reliability",
+    "eligibility_agreement": "12/12 (100%)",
+    "eligibility_kappa": 1.0,
+    "eligibility_kappa_note": "1.00 by convention because there is no variance.",
+    "ordinal_agreement": "7/8 (87.5%)",
+    "ordinal_unweighted_kappa": 0.78,
+    "ordinal_linear_weighted_kappa": 0.86,
+    "disagreement": "promptcot: first pass 0, second pass proposed 1, adjudicated 0.",
+    "human_second_coder": false,
+    "model_version_logged": false
+  },
+  "interpretation_rules": [
+    "Do not report these counts as population prevalence.",
+    "Do not describe the LLM-LLM kappa values as human reliability.",
+    "Do not pool the GSM1k rows into the primary-pair estimate.",
+    "Do not infer causation from citation co-occurrence."
+  ]
+}

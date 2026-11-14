@@ -1,0 +1,8 @@
+quantity,count,note
+Raw EvalPlus citation rows,2572,"Semantic Scholar reports 2,573; one row not returned."
+Raw SWE-bench+ citation rows,136,Semantic Scholar reports 136.
+Identifier-deduplicated union,2684,Intermediate count; not the analysis frame.
+Title-deduplicated clusters,2666,Frozen analysis frame.
+SWE-bench+ census stratum,135,Includes 23 clusters citing both critiques.
+EvalPlus-only sample stratum,2531,Sampled in the planned main design.
+Clusters citing both critiques,23,Assigned to the SWE-bench+ census.

@@ -1,0 +1,4 @@
+critique,n,full,full_pct,wilson_low,wilson_high,acknowledged_or_better,independent_remediation
+evalplus,3,1,33.3%,6.1%,79.2%,2,0
+gsm1k,2,0,0.0%,0.0%,65.8%,1,1
+swebenchplus,3,0,0.0%,0.0%,56.1%,2,3
