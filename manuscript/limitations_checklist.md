@@ -1,7 +1,7 @@
 # Limitations and Submission-Readiness Checklist
 
 **Status:** pilot-based draft. This file separates limitations that are acceptable
-for a pilot methods paper from limitations that block submission as a full-scale
+in a pilot-based draft from limitations that block submission as a full-scale
 empirical study.
 
 ## A. Limitations of the pilot evidence
@@ -42,7 +42,7 @@ empirical study.
 - Do not infer causation from citation co-occurrence.
 - Do not describe the manuscript as peer reviewed or accepted.
 - Do not pool GSM1k into the primary denominator.
-- Do not treat the zero placeholders for ineligible papers as outcomes.
+- Do not treat the blank scores for ineligible papers as outcomes.
 
 ## D. Submission readiness
 
@@ -64,7 +64,7 @@ empirical study.
 | Cover letter | **Draft only** | Complete after full study; do not send current draft. |
 | Reviewer suggestions | **Not prepared** | Use expertise categories; do not fabricate names. |
 
-## E. Honest bottom line
+## E. Bottom line
 
 The repository is complete as **research infrastructure plus a pilot-based draft**.
 It is not a complete full-scale empirical study. The binding constraints are the

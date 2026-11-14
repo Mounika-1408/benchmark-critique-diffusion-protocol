@@ -12,4 +12,6 @@
 
 Year distribution: 2022 = 2, 2023 = 119, 2024 = 526, 2025 = 838, 2026 = 1,139, unknown = 42.
 
-Frame SHA-256: `6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c`. Source SHA-256: `46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72`.
+2026 is incomplete and includes 231 future-dated records; 42 clusters have no publication year.
+
+Frame SHA-256: `4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0`. Source SHA-256: `46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72`.

@@ -11,7 +11,7 @@
 
 ## 1. Decision
 
-The study is **NEEDS EXTERNAL INPUT**. It is not **READY TO EXECUTE** and it is not **NOT FEASIBLE**.
+The status is **NEEDS EXTERNAL INPUT**: the study is neither **READY TO EXECUTE** nor **NOT FEASIBLE**.
 
 The scientific design is specified, the frame is built and frozen, the rubric is at v1.1, and the pilot shows the coding task is tractable. What is missing is external: a human second coder, evidence that the general frame is accessible, and a registration DOI. None of these can be manufactured by more analysis. The decision therefore turns on three conditions with a hard review date of **2026-12-14**.
 

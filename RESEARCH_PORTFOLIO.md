@@ -20,9 +20,8 @@ purposive 29-paper pilot. In the pilot, 27 full texts were accessible, 12 papers
 were coded, 8 were eligible for the all-pair set, and 6 were eligible for the two
 primary pairs. One primary-pair paper fully adopted its critique's remediation
 (1/6, 16.7%; Wilson 95% CI 3.0–56.4%), while three acknowledged the finding
-without adopting the artifact. The pilot demonstrates that citation,
-acknowledgment, and adoption are distinguishable; it does not estimate
-prevalence.
+without adopting the artifact. The pilot shows that citation, acknowledgment,
+and adoption are distinguishable; it does not estimate prevalence.
 
 ## Contribution
 
@@ -34,10 +33,10 @@ prevalence.
    identifier coverage, anomaly counts, and SHA-256 hashes.
 3. **Pilot evidence.** A 12-row coding table with short quotes and documented
    boundary decisions, plus generated tables and figures.
-4. **Honest failure documentation.** The full-scale 900-paper study was designed
-   but not executed; a 335-record feasibility cohort was drawn, partially
-   retrieved, and halted without coding. Both facts are recorded rather than
-   hidden.
+4. **Transparent documentation of incomplete work.** The full-scale 900-paper
+   study was designed but not executed; a 335-record feasibility cohort was
+   drawn, partially retrieved, and halted without coding. Both facts are
+   documented rather than omitted.
 
 ## Evidence and verification
 
@@ -66,7 +65,7 @@ python scripts/verify_checksums.py
   and 2,531 EvalPlus-only clusters.
 - **Pilot:** purposive 29-paper access frame; 27 accessible; 12 coded; 8 eligible
   all-pair; 6 eligible primary-pair.
-- **Instrument:** rubric v1.1, frozen before results were interpreted.
+- **Instrument:** rubric v1.1, frozen on 13 November 2026 for the planned study.
 - **Analysis:** counts, Wilson intervals, exact-binomial diagnostics labeled
   descriptive only.
 
@@ -94,15 +93,15 @@ python scripts/verify_checksums.py
 Research design under uncertainty; construct operationalization; citation-frame
 construction and deduplication; rubric development and boundary adjudication;
 reproducible analysis with standard-library Python; dependency-free figure
-generation; research-integrity documentation; honest reporting of incomplete work;
-Git/GitHub packaging and test automation.
+generation; research-integrity documentation; transparent reporting of incomplete
+work; Git/GitHub packaging and a reproducible test suite.
 
 ## Links
 
-- Manuscript: `manuscript/paper.md`
-- Abstract: `manuscript/abstract.md`
-- Protocol: `PROTOCOL.md`
-- Rubric: `rubric_v1.1.md`
-- Reproducibility: `reproducibility/README.md`
-- Limitations: `manuscript/limitations_checklist.md`
-- Submission status: `manuscript/submission/submission_checklist.md`
+- [Manuscript](manuscript/paper.md)
+- [Abstract](manuscript/abstract.md)
+- [Protocol](PROTOCOL.md)
+- [Rubric](rubric_v1.1.md)
+- [Reproducibility package](reproducibility/README.md)
+- [Limitations checklist](manuscript/limitations_checklist.md)
+- [Submission status](manuscript/submission/submission_checklist.md)

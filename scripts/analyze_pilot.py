@@ -208,7 +208,9 @@ def main() -> int:
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "pilot_results.json").write_text(
-        json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(results, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+        newline="\n",
     )
 
     normalized_fields = [
@@ -223,7 +225,12 @@ def main() -> int:
         "notes",
     ]
     with (OUT_DIR / "pilot_rows_normalized.csv").open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=normalized_fields, extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=normalized_fields,
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
         writer.writeheader()
         for row in rows:
             writer.writerow({key: row.get(key, "") for key in normalized_fields})
@@ -284,7 +291,7 @@ def main() -> int:
         f"- H1 (full adoption <25%): p = {results['primary_pair']['exact_binomial_diagnostic']['h1_p_value_full_adoption_below_0_25']:.3f}\n",
         f"- H3 (score 0/1 >50%): p = {results['primary_pair']['exact_binomial_diagnostic']['h3_p_value_zero_or_one_above_0_50']:.3f}\n",
     ]
-    (OUT_DIR / "pilot_results.md").write_text("".join(lines), encoding="utf-8")
+    (OUT_DIR / "pilot_results.md").write_text("".join(lines), encoding="utf-8", newline="\n")
 
     print(json.dumps({
         "primary_pair": results["primary_pair"],

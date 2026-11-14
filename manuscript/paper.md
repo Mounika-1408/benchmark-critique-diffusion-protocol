@@ -7,7 +7,7 @@
 **Target venue:** *Empirical Software Engineering* (primary); *Data-centric Machine Learning Research* (alternative)  
 **Evidence base:** frozen citation frame of 2,666 title clusters plus a purposive 29-paper pilot (27 accessible, 12 coded, 8 eligible for all pairs, 6 eligible for the two primary pairs)
 
-> **Read this first.** This manuscript reports a pilot, not a population study. The pilot was purposive, the eligible samples are six and eight papers, and the reliability statistics are LLM–LLM agreement rather than human inter-rater reliability. The paper does **not** estimate the prevalence of adoption in the 2,666-paper frame, does **not** establish causal diffusion, and is **not** submission-ready. It is a complete, honest first draft of the argument, instrument, and pilot evidence, with the full-scale study specified but not executed.
+> **Read this first.** This manuscript reports a pilot, not a population study. The pilot was purposive, the eligible samples are six and eight papers, and the reliability statistics are LLM–LLM agreement rather than human inter-rater reliability. The paper does **not** estimate the prevalence of adoption in the 2,666-paper frame, does **not** establish causal diffusion, and is **not** submission-ready. It is a complete first draft of the argument, instrument, and pilot evidence, with the full-scale study specified but not executed.
 
 ---
 
@@ -172,7 +172,7 @@ The framework treats four mechanisms as explanations to be examined, not as test
 1. **Artifact availability.** A public, licensed, versioned artifact lowers the cost of adoption. Both EvalPlus and SWE-bench+ satisfy this condition, so availability alone cannot explain a difference between them.
 2. **Compatibility.** A remediation that fits an existing harness is easier to adopt than one that requires changing instance sets, test harnesses, and agent runs. EvalPlus is closer to a drop-in test suite; SWE-bench+ is closer to a dataset-level re-evaluation.
 3. **Implementation complexity.** Even a compatible artifact requires engineering time. A lab under deadline pressure may cite the critique and keep the original benchmark.
-4. **Time since critique.** Adoption may lag publication because papers in progress use the benchmark version available when the work began. A citation in 2024 may reflect a evaluation designed before the remediation existed.
+4. **Time since critique.** Adoption may lag publication because papers in progress use the benchmark version available when the work began. A citation in 2024 may reflect an evaluation designed before the remediation existed.
 
 Two adjacent outcomes complicate the ladder:
 
@@ -215,7 +215,7 @@ A paper is eligible only if all three conditions hold:
 - **E2:** it contains a bibliographic citation to the critique;
 - **E3:** a full text is available in English with enough methods/results detail to code.
 
-Failure codes are `INELIGIBLE_NO_EVAL`, `INELIGIBLE_NO_CITATION`, `UNCODABLE_ACCESS`, and `UNCODABLE_LANGUAGE`. Eligibility is decided before scoring. An ineligible paper receives no 0–3 score; the placeholder zero in the source coding table is not an outcome.
+Failure codes are `INELIGIBLE_NO_EVAL`, `INELIGIBLE_NO_CITATION`, `UNCODABLE_ACCESS`, and `UNCODABLE_LANGUAGE`. Eligibility is decided before scoring. An ineligible paper receives no 0–3 score; its score field is blank in the source coding table.
 
 ### 5.4 Coding procedure
 
@@ -317,7 +317,7 @@ The year distribution is 2022: 2; 2023: 119; 2024: 526; 2025: 838; 2026: 1,139; 
 | EvalPlus-only sample stratum | 2,531 | Sampled in the planned main design. |
 | Clusters citing both critiques | 23 | Assigned to the SWE-bench+ census. |
 
-**Frame hashes.** Source `citation_frame.json`: `46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72`. Analysis CSV `citation_frame_2666.csv`: `6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c`.
+**Frame hashes.** Source `citation_frame.json`: `46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72`. Analysis CSV `citation_frame_2666.csv`: `4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0`.
 
 ![Figure 1](figures/fig1_frame_years.svg)
 
@@ -650,7 +650,7 @@ None of these is established here.
 
 ### 13.1 Theoretical implications
 
-The study contributes a middle-range construct between citation and implementation. Diffusion-of-innovations research treats adoption as a process with awareness, decision, implementation, and confirmation (Rogers, 2003). Our ladder operationalizes a narrow slice of that process for benchmark remediations: citation (awareness), acknowledgment (decision without implementation), partial adoption (implementation in a secondary role), and full adoption (implementation in the primary evaluation). The pilot suggests that the middle levels are not empty: acknowledgment was the modal category in the primary pairs (3/6), and independent remediation was common (3/6). A two-level "used / not used" coding would have collapsed these distinctions.
+The study contributes a middle-range construct between citation and implementation. Diffusion-of-innovations research treats adoption as a process with awareness, decision, implementation, and confirmation (Rogers, 2003). Our ladder operationalizes a narrow slice of that process for benchmark remediations: citation (awareness), acknowledgment (decision without implementation), partial adoption (implementation in a secondary role), and full adoption (implementation in the primary evaluation). The pilot suggests that the ordinal distinctions are not vacuous: acknowledgment was the modal category in the primary pairs (3/6), and independent remediation was common (3/6). A two-level "used / not used" coding would have collapsed these distinctions.
 
 The study also distinguishes **adoption** from **adaptation**. Rogers notes that adopters may reinvent an innovation; in our setting, a lab may build its own stronger tests rather than use the critique's artifact. That is adaptation, not diffusion of the specific remedy. Whether adaptation should count as success depends on the research question. For a benchmark maintainer asking "did anyone use our artifact?", it should not. For a field asking "did evaluation practice improve?", it might. The rubric keeps both visible by coding independent remediation separately.
 
@@ -715,7 +715,7 @@ The pilot's LLM–LLM agreement is not human reliability. The model may share bi
 7. **The pilot cannot support the EvalPlus/SWE-bench+ contrast.** Each side has three papers.
 8. **The frame is a Semantic Scholar snapshot.** It misses non-indexed work and is incomplete for 2026; 231 records have future-dated metadata.
 9. **The pilot's LLM model, prompt, and temperature were not preserved.** This is a reproducibility gap.
-10. **No OSF registration or DOI exists.** The protocol is pre-specified but not registered. The manuscript must not call it preregistered.
+10. **No OSF registration or DOI exists.** The protocol is pre-specified but not registered; it is not preregistered.
 11. **No peer review.** This is a draft, not an accepted paper.
 12. **Licensing constraints.** Full texts are not redistributed; the coding table contains short quotes and metadata only. Third-party artifacts retain their licenses.
 
@@ -794,7 +794,7 @@ python scripts/verify_checksums.py
 
 > The frozen citation frame, sampling scripts, coding rubric, pilot coding table, analysis scripts, figures, and tables are available in this repository. The citation frame is derived from Semantic Scholar metadata retrieved on 13 November 2026 and is provided for research use subject to Semantic Scholar's terms. Full texts are not redistributed. The pilot coding is LLM-assisted; no human second coder participated. The protocol is not registered and no OSF DOI is available.
 
-### 17.4 Reproductibility status
+### 17.4 Reproducibility status
 
 - Frame integrity: reproducible and tested.
 - Pilot counts and intervals: reproducible and tested.

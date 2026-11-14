@@ -49,8 +49,8 @@ One row per coded pilot paper (12 rows).
 | `evidence_quote` | string | Short verbatim quote (≤60 words) or reference entry supporting the code. |
 | `notes` | string | Boundary decision and coding rationale. |
 
-The four ineligible rows contain `score` 0 in the CSV as a placeholder. They are
-**not** adoption outcomes and are excluded from every denominator.
+The four ineligible rows have a blank `score` in the CSV. They are **not**
+adoption outcomes and are excluded from every denominator.
 
 ## 4. `analysis/pilot_results.json`
 

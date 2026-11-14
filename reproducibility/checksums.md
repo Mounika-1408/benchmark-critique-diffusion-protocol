@@ -21,7 +21,7 @@ from the committed files.
 - `manuscript/abstract.md`
 - `manuscript/paper.md`
 - `manuscript/references.bib`
-- the six Markdown tables in `manuscript/tables/`
+- the six Markdown and six CSV tables in `manuscript/tables/`
 - the three figure CSV files in `manuscript/figures/`
 
 The generated `analysis/pilot_results.json` is excluded because it contains a
@@ -36,6 +36,10 @@ python scripts/verify_checksums.py
 
 Expected output: one `OK` line per covered file and a final count, exit code 0.
 Any mismatch prints `FAIL` and exits 1.
+
+Hashes are computed over the bytes stored in Git. `.gitattributes` normalizes
+text files to LF, so a fresh clone verifies on Windows, macOS, and Linux. A text
+file rewritten with CRLF line endings will not match.
 
 ## Regenerate
 
@@ -52,6 +56,6 @@ commit message and, for a frame change, in `reproducibility/provenance.md`.
 
 | File | SHA-256 |
 |---|---|
-| `data/citation_frame_2666.csv` | `6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c` |
+| `data/citation_frame_2666.csv` | `4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0` |
 | `data/frame_summary.json` (source frame hash field) | `46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72` |
 | `pilot/pilot_coding_table.csv` | Recorded in `analysis/pilot_results.json` and verified by tests. |

@@ -110,7 +110,7 @@ The primary-pair subset had no ordinal disagreements (6/6), but n=6 is too small
 
 ---
 
-## 7. What the pilot proves
+## 7. What the pilot supports
 
 - The coding task is tractable: 12 papers were coded with evidence quotes in a single session.
 - The rubric can distinguish full adoption, acknowledgment, and citation-only; the categories are not collapsing.
@@ -118,7 +118,7 @@ The primary-pair subset had no ordinal disagreements (6/6), but n=6 is too small
 - Access to a purposive frame is high (93.1%), so the main study is not obviously blocked by paywalls.
 - The main boundary problems are identifiable and can be resolved in rubric v1.1: generic clusters, independent remediation, derivative benchmarks, and partial vs full.
 
-## 8. What the pilot does not prove
+## 8. What the pilot does not establish
 
 - It does not estimate prevalence in the 2,666-paper frame. The frame is purposive and n=8 eligible.
 - It does not establish human reliability. The κ values are LLM–LLM.

@@ -52,7 +52,7 @@ The two inaccessible papers were not coded.
 
 - **Design:** 135 SWE-bench+ census records + 200 EvalPlus-only records.
 - **Seed:** `20261113`.
-- **Frame hash:** `6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c`.
+- **Frame hash:** `4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0`.
 - **Manifest:** `data/cohort_feasibility.manifest.json`.
 - **Status:** drawn and partially retrieved, then halted. **No records were coded.**
   No cohort result appears in the manuscript. It is documented because it is a

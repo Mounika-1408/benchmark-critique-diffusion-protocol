@@ -38,9 +38,19 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 
 def write_csv(path: Path, rows: list[dict[str, Any]], fields: list[str]) -> None:
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=fields,
+            extrasaction="ignore",
+            lineterminator="\n",
+        )
         writer.writeheader()
         writer.writerows(rows)
+
+
+def write_markdown(path: Path, content: str) -> None:
+    with path.open("w", encoding="utf-8", newline="\n") as handle:
+        handle.write(content)
 
 
 def pct(k: int, n: int) -> str:
@@ -65,7 +75,7 @@ def main() -> int:
             "critique": "EvalPlus (Liu et al., 2023)",
             "criticized": "HumanEval; MBPP",
             "recommended": "HumanEval+ / MBPP+ augmented tests as the primary evaluation",
-            "artifact": "Public GitHub harness; Apache-2.0; 80x tests for HumanEval+, 35x for MBPP+, 378 MBPP+ tasks",
+            "artifact": "Public GitHub harness; Apache-2.0; 80× tests for HumanEval+, 35× for MBPP+, 378 MBPP+ tasks",
             "cost": "Low: drop-in test suite and harness",
             "role": "Primary",
         },
@@ -103,7 +113,7 @@ def main() -> int:
     lines += [
         "\nArtifact facts are verified in `verification/source_verification_log.md`. Cost is an analytic characterization, not a measured implementation time.\n",
     ]
-    (OUT / "table1_benchmark_pairs.md").write_text("".join(lines), encoding="utf-8")
+    write_markdown(OUT / "table1_benchmark_pairs.md", "".join(lines))
 
     # Table 2: frame profile
     frame_rows = [
@@ -124,16 +134,17 @@ def main() -> int:
         lines.append(f"| {row['quantity']} | {row['count']:,} | {row['note']} |\n")
     lines += [
         "\nYear distribution: " + ", ".join(f"{year} = {count:,}" for year, count in sorted(years.items())) + ".\n\n",
+        "2026 is incomplete and includes 231 future-dated records; 42 clusters have no publication year.\n\n",
         f"Frame SHA-256: `{summary['sha256']['citation_frame_2666_csv']}`. Source SHA-256: `{summary['sha256']['citation_frame_source']}`.\n",
     ]
-    (OUT / "table2_frame_profile.md").write_text("".join(lines), encoding="utf-8")
+    write_markdown(OUT / "table2_frame_profile.md", "".join(lines))
 
     # Table 3: pilot flow
     flow = results["flow"]
     flow_rows = [
         {"stage": "Purposive access frame", "n": flow["purposive_frame"], "note": "Selected for construct coverage, not randomly."},
         {"stage": "Full text accessible", "n": flow["full_text_accessible"], "note": "93.1% of the purposive frame; not generalizable."},
-        {"stage": "Coded with rubric", "n": flow["coded"], "note": "12 papers; evidence quotes recorded."},
+        {"stage": "Coded with rubric", "n": flow["coded"], "note": "Rubric v1.0; evidence quotes recorded."},
         {"stage": "Eligible, all pairs", "n": flow["eligible_all_pairs"], "note": "Includes two GSM1k secondary rows."},
         {"stage": "Eligible, primary pairs", "n": flow["eligible_primary_pairs"], "note": "EvalPlus + SWE-bench+ only."},
         {"stage": "Ineligible", "n": flow["ineligible"], "note": "Mostly no evaluation of the criticized benchmark."},
@@ -142,53 +153,61 @@ def main() -> int:
     lines = ["# Table 3. Pilot flow\n\n| Stage | n | Note |\n|---|---:|---|\n"]
     for row in flow_rows:
         lines.append(f"| {row['stage']} | {row['n']} | {row['note']} |\n")
-    (OUT / "table3_pilot_flow.md").write_text("".join(lines), encoding="utf-8")
+    write_markdown(OUT / "table3_pilot_flow.md", "".join(lines))
 
     # Table 4: score distributions
     primary = results["primary_pair"]
     all_pair = results["all_pair"]
+    labels = {0: "Citation only", 1: "Acknowledged", 2: "Partial adoption", 3: "Full adoption"}
     distribution_rows = []
     for score in range(4):
         distribution_rows.append({
             "score": score,
+            "label": labels[score],
             "primary_pair_n": primary["score_distribution"][str(score)],
             "primary_pair_share": f"{primary['score_share'][str(score)] * 100:.1f}%",
             "all_pairs_n": all_pair["score_distribution"][str(score)],
             "all_pairs_share": f"{all_pair['score_share'][str(score)] * 100:.1f}%",
         })
     write_csv(OUT / "table4_pilot_scores.csv", distribution_rows,
-              ["score", "primary_pair_n", "primary_pair_share", "all_pairs_n", "all_pairs_share"])
+              ["score", "label", "primary_pair_n", "primary_pair_share", "all_pairs_n", "all_pairs_share"])
     lines = [
         "# Table 4. Pilot adoption-score distribution\n\n",
         "| Score | Label | Primary pair n | Primary pair share | All pairs n | All pairs share |\n",
         "|---:|---|---:|---:|---:|---:|\n",
     ]
-    labels = {0: "Citation only", 1: "Acknowledged", 2: "Partial adoption", 3: "Full adoption"}
     for row in distribution_rows:
         lines.append(
-            f"| {row['score']} | {labels[row['score']]} | {row['primary_pair_n']} | {row['primary_pair_share']} | "
+            f"| {row['score']} | {row['label']} | {row['primary_pair_n']} | {row['primary_pair_share']} | "
             f"{row['all_pairs_n']} | {row['all_pairs_share']} |\n"
         )
     lines += [
         "\nPrimary pair n = 6; all pairs n = 8. The all-pair distribution includes the two GSM1k secondary rows and is not the primary denominator.\n",
     ]
-    (OUT / "table4_pilot_scores.md").write_text("".join(lines), encoding="utf-8")
+    write_markdown(OUT / "table4_pilot_scores.md", "".join(lines))
 
     # Table 5: pair-specific results
+    critique_labels = {
+        "evalplus": "EvalPlus",
+        "swebenchplus": "SWE-bench+",
+        "gsm1k": "GSM1k (secondary)",
+    }
     pair_rows = []
-    for critique, summary in results["by_critique"].items():
+    for critique in ("evalplus", "swebenchplus", "gsm1k"):
+        data = results["by_critique"][critique]
         pair_rows.append({
             "critique": critique,
-            "n": summary["n_eligible"],
-            "full": summary["full_adoption_k"],
-            "full_pct": f"{summary['full_adoption'] * 100:.1f}%",
-            "wilson_low": f"{summary['wilson_95_ci'][0] * 100:.1f}%",
-            "wilson_high": f"{summary['wilson_95_ci'][1] * 100:.1f}%",
-            "acknowledged_or_better": summary["acknowledged_or_better_k"],
-            "independent_remediation": summary["independent_remediation_k"],
+            "critique_label": critique_labels[critique],
+            "n": data["n_eligible"],
+            "full": data["full_adoption_k"],
+            "full_pct": f"{data['full_adoption'] * 100:.1f}%",
+            "wilson_low": f"{data['wilson_95_ci'][0] * 100:.1f}%",
+            "wilson_high": f"{data['wilson_95_ci'][1] * 100:.1f}%",
+            "acknowledged_or_better": data["acknowledged_or_better_k"],
+            "independent_remediation": data["independent_remediation_k"],
         })
     write_csv(OUT / "table5_pair_specific.csv", pair_rows,
-              ["critique", "n", "full", "full_pct", "wilson_low", "wilson_high", "acknowledged_or_better", "independent_remediation"])
+              ["critique", "critique_label", "n", "full", "full_pct", "wilson_low", "wilson_high", "acknowledged_or_better", "independent_remediation"])
     lines = [
         "# Table 5. Pair-specific pilot results\n\n",
         "| Critique | Eligible n | Full (3) | Full % | Wilson 95% CI | Acknowledged or better | Independent remediation |\n",
@@ -196,13 +215,13 @@ def main() -> int:
     ]
     for row in pair_rows:
         lines.append(
-            f"| {row['critique']} | {row['n']} | {row['full']} | {row['full_pct']} | "
+            f"| {row['critique_label']} | {row['n']} | {row['full']} | {row['full_pct']} | "
             f"{row['wilson_low']}–{row['wilson_high']} | {row['acknowledged_or_better']} | {row['independent_remediation']} |\n"
         )
     lines += [
         "\nThe EvalPlus and SWE-bench+ rows each contain three papers. The contrast is descriptive only and is not powered.\n",
     ]
-    (OUT / "table5_pair_specific.md").write_text("".join(lines), encoding="utf-8")
+    write_markdown(OUT / "table5_pair_specific.md", "".join(lines))
 
     # Table 6: coded cases
     case_rows = []
@@ -225,14 +244,18 @@ def main() -> int:
     ]
     for row in case_rows:
         note = str(row["boundary_note"]).replace("|", "\\|")
+        score = str(row["score"]).strip() or "—"
+        eligible = "Yes" if row["eligible"] == "true" else "No"
+        independent = "Yes" if row["independent_remediation"] == "true" else "No"
+        critique = critique_labels.get(row["critique"], row["critique"])
         lines.append(
-            f"| `{row['paper_key']}` | {row['critique']} | {row['eligible']} | {row['score']} | "
-            f"{row['engagement']} | {row['independent_remediation']} | {note} |\n"
+            f"| `{row['paper_key']}` | {critique} | {eligible} | {score} | "
+            f"{row['engagement']} | {independent} | {note} |\n"
         )
     lines += [
-        "\nScores are defined in `rubric_v1.1.md`. Ineligible papers receive no 0–3 score; the `0` shown for them in the source table is a placeholder, not an outcome.\n",
+        "\nScores are defined in `rubric_v1.1.md`. Ineligible papers receive no 0–3 score; their score field is blank in the source data and is shown here as an em dash.\n",
     ]
-    (OUT / "table6_coded_cases.md").write_text("".join(lines), encoding="utf-8")
+    write_markdown(OUT / "table6_coded_cases.md", "".join(lines))
 
     print(f"Wrote 6 tables to {OUT}")
     return 0

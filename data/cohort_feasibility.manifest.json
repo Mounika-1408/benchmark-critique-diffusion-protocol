@@ -2,7 +2,7 @@
   "design": "feasibility",
   "design_note": "Feasibility deviation: 135 SWE-bench+ census + 200 EvalPlus-only; not the registered 900-paper sample.",
   "frame": "data/citation_frame_2666.csv",
-  "frame_sha256": "6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c",
+  "frame_sha256": "4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0",
   "seed": 20261113,
   "osf_doi": null,
   "sampled_utc": "2026-11-13T15:30:07.267813+00:00",

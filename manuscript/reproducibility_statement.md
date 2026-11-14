@@ -68,8 +68,8 @@ LLM assistance, and must human double-code at least 20% of eligible papers.
 ## Registration and status
 
 The protocol was prepared for OSF registration but was **not registered**, and no
-DOI was obtained. The study must not be described as preregistered. This is a
-pilot-based draft, not a completed full-scale study or a peer-reviewed paper.
+DOI was obtained. The study is therefore not preregistered. This is a pilot-based
+draft, not a completed full-scale study or a peer-reviewed paper.
 
 ## Integrity
 

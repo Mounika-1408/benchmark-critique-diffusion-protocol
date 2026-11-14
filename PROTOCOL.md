@@ -113,11 +113,11 @@ This study differs in five ways:
 4. **Contrast:** a low-cost test-augmentation critique (EvalPlus) versus a high-cost dataset-filtering critique (SWE-bench+).
 5. **Construct:** diffusion of a critique's *recommended practice* into evaluation, not data availability or licensing alone.
 
-The study also builds on citation-diffusion research (Small, 1978), benchmark-critique work (Benchmark Lottery; contamination and leakage studies), and reproducibility/artifact-adoption research. The contribution is not the invention of "cited but not used"; it is a comparative, pre-registered estimate for two influential code benchmarks with a transparent rubric.
+The study also builds on citation-diffusion research (Small, 1978), benchmark-critique work (Benchmark Lottery; contamination and leakage studies), and reproducibility/artifact-adoption research. The contribution is not the observation that citation can be disconnected from use. It is a comparative, transparently coded design for estimating adoption across two influential code benchmarks.
 
-### 2.4 Contribution claims
+### 2.4 Planned contributions
 
-1. **Prevalence:** the first systematic estimate of documented adoption of EvalPlus and SWE-bench+ among their citing papers.
+1. **Prevalence (planned full study):** a systematic estimate of documented adoption of EvalPlus and SWE-bench+ among their citing papers.
 2. **Typology:** a four-level adoption scale that separates citation, acknowledgment, partial adoption, and full adoption, with a boundary rule that prevents independent remediation from being counted as diffusion.
 3. **Contrast:** a descriptive comparison of a low-cost, drop-in remediation with a high-cost, dataset-level remediation, both public and licensed.
 4. **Open evidence:** a frozen frame, coding rubric, sampling script, analysis code, and (where licensing permits) derived coding table.
@@ -193,7 +193,7 @@ GSM1k is retained as a **secondary task-fit contrast** in a separate file. It is
 
 **Frame hash (SHA-256):**
 - Source `citation_frame.json`: `46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72`
-- Analysis CSV `citation_frame_2666.csv`: `6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c`
+- Analysis CSV `citation_frame_2666.csv`: `4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0`
 
 ### 4.2 Deduplication rules
 
@@ -788,7 +788,7 @@ Lead researcher: conceptualization, methodology, data curation, formal analysis,
 
 **NEEDS EXTERNAL INPUT.**
 
-The protocol is complete and internally consistent. The frame is built, the rubric is specified, the pilot shows the coding task is tractable, and the analysis plan is pre-registered-ready. The study is **not** NOT FEASIBLE.
+The protocol is complete and internally consistent. The frame is built, the rubric is specified, the pilot shows the coding task is tractable, and the analysis plan is prepared for registration. The study is therefore neither **READY TO EXECUTE** nor **NOT FEASIBLE**; it **NEEDS EXTERNAL INPUT**.
 
 Two critical external inputs are missing:
 
@@ -810,7 +810,7 @@ If C1–C3 are met: **READY TO EXECUTE** on 2026-12-15. If C2 is 50–70%, proce
 
 ### 14.3 Fallback if C1 fails
 
-A single-coder study is **not** the pre-registered protocol. If C1 fails:
+A single-coder study would **not** satisfy the planned protocol. If C1 fails:
 
 - Target 80 eligible papers (560 invited at 80% access/18% eligibility).
 - No human κ; run a 10% LLM-assisted audit and report agreement as a diagnostic, not reliability.

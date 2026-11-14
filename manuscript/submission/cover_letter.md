@@ -14,8 +14,12 @@ Dear Editors,
 Re: Submission to *[Journal]*
 
 Please consider the manuscript **“Does Benchmark Critique Diffuse into Evaluation
-Practice? A Comparative Study of EvalPlus and SWE-bench+ Adoption”** for
+Practice? A Citation Audit of EvalPlus and SWE-bench+ Adoption”** for
 publication in *[Journal]*.
+
+> **Title note.** The current pilot-based draft is titled “A Pilot-Based Study of
+> EvalPlus and SWE-bench+ Adoption.” Use the full-study title above only after the
+> full-scale study is executed and the manuscript is revised.
 
 **The problem.** Benchmark critiques identify concrete defects in widely used
 evaluations and release remediations, but citation counts do not show whether
@@ -23,12 +27,12 @@ citing papers change their evaluation practice. Claims about progress in code
 generation rest on benchmarks whose known defects may be cited without being acted
 on.
 
-**What the full study does.** We combine a frozen citation frame of 2,666 title
-clusters with a stratified probability sample of citing papers. We code documented
-adoption on a four-level rubric that separates citation only, acknowledgment,
-partial adoption, and full adoption, and we report pair-specific and
-design-weighted estimates with Wilson intervals. We separate independent
-remediation from adoption of the critique's artifact.
+**What the full study will do.** The study will combine a frozen citation frame
+of 2,666 title clusters with a stratified probability sample of citing papers. It
+will code documented adoption on a four-level rubric that separates citation only,
+acknowledgment, partial adoption, and full adoption, and will report pair-specific
+and design-weighted estimates with Wilson intervals. Independent remediation will
+be coded separately from adoption of the critique's artifact.
 
 **Why it fits *[Journal]*.** *[One or two sentences tailored to the venue's
 verified scope. For EMSE, lead with applied SE evaluation practice and

@@ -19,7 +19,7 @@ def test_checksum_file_has_no_duplicates(root):
 
 def test_frozen_frame_hash_is_recorded(root):
     summary = (root / "data" / "frame_summary.json").read_text(encoding="utf-8")
-    assert "6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c" in summary
+    assert "4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0" in summary
     assert "46a58fe017577d9e15c22e6bef198fdff526b511ff7897519b6a0e91542cdd72" in summary
 
 

@@ -64,7 +64,7 @@ def test_reliability_is_not_reported_as_human(paper):
 def test_no_preregistration_claim(paper):
     lower = paper.lower()
     assert "not** been registered" in lower or "not been registered" in lower
-    assert "must not call it preregistered" in lower
+    assert "not preregistered" in lower
     assert "does not describe the study as preregistered" in lower
     assert "osf" in lower
 

@@ -1,6 +1,6 @@
 # Reproducibility Package
 
-This directory documents exactly what can and cannot be reproduced from the public
+This directory documents what can and cannot be reproduced from the public
 repository for *Does Benchmark Critique Diffuse into Evaluation Practice?*
 
 **Project status:** pilot-based draft. The full-scale study was designed but not

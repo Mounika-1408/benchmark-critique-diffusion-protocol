@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 EXPECTED_CSV_SHA256 = (
-    "6a0a374ba6120b244418e887a76a83d6bfb8a95dd61cfc822cf349ac7043d30c"
+    "4650ce1b67df80bdeb1691b883a36f5bda540efd1dad20da652660f216f705a0"
 )
 
 

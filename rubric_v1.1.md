@@ -1,6 +1,6 @@
 # Coding Rubric v1.1 — Benchmark Critique Adoption
 
-**Status:** Frozen for pre-registration, 13 November 2026  
+**Status:** Frozen before registration, 13 November 2026  
 **Supersedes:** Rubric v1.0 (pilot, 13 November 2026)  
 **Applies to:** EvalPlus → HumanEval/MBPP and SWE-bench+ → SWE-bench/Lite/Verified (primary); GSM1k → GSM8K (secondary contrast only)
 

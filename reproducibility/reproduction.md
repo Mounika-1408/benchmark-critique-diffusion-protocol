@@ -98,4 +98,5 @@ frozen inputs.
   the diff, restore the committed version, or document an intentional amendment.
 - **Unicode display issues in PowerShell:** files are UTF-8. Read them with an
   editor or `python -c "print(open(..., encoding='utf-8').read())"`.
-- **Matplotlib missing:** not needed. Figures are hand-written SVG.
+- **Matplotlib missing:** not needed. Figures are generated as SVG by
+  `scripts/make_figures.py`; no plotting library is required.
