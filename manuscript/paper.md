@@ -391,7 +391,7 @@ The four ineligible pilot papers illustrate the boundary rules:
 - `hafix` cites Aleithan et al. in a generic bug-fixing list and does not evaluate SWE-bench/Lite/Verified.
 - `demystifying` cites Zhang et al. in a generic claim and does not evaluate GSM8K.
 
-Ineligible papers receive no 0–3 score. The zero placeholders in the pilot coding table are not outcomes.
+Ineligible papers receive no 0–3 score. Their blank score fields in the pilot coding table are not outcomes.
 
 ### 8.5 Access and the feasibility deviation
 
