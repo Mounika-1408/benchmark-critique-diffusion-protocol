@@ -153,7 +153,8 @@ def test_pilot_status_is_stated_plainly(site):
     assert "not human reliability" in text
     assert "The 900-paper full study is specified but" in text
     assert "not executed" in text
-    assert "No DOI or registration record exists." in text
+    assert "10.5281/zenodo.24245000" in text
+    assert "No OSF registration exists" in text
     assert "not submission-ready" not in text
     assert "peer-reviewed publication" not in text.lower()
 
@@ -302,11 +303,13 @@ def test_citation_metadata_matches_downloadable_bibtex(root: Path, site):
     assert "Aman, Syed Abdul" in bib
     assert "year         = {2026}" in bib
     assert "Pilot-study preprint; not peer reviewed" in bib
+    assert "doi          = {10.5281/zenodo.24245000}" in bib
     assert CANONICAL in bib
     assert REPO in bib
 
     assert "@misc{aman2026benchmarkcritique," in parser.text
     assert CANONICAL in parser.text
+    assert "10.5281/zenodo.24245000" in parser.text
     assert "cite.bib" in html
 
     citation = "Aman, S. A. (2026)."

@@ -6,6 +6,8 @@
 
 **Paper (PDF):** [manuscript/paper.pdf](manuscript/paper.pdf) · **Typeset source:** [manuscript/paper.tex](manuscript/paper.tex) · **Markdown:** [manuscript/paper.md](manuscript/paper.md)
 
+**DOI:** [10.5281/zenodo.24245000](https://doi.org/10.5281/zenodo.24245000) · **Zenodo record:** [zenodo.org/records/24245000](https://zenodo.org/records/24245000)
+
 <p align="center">
   <img alt="Status: pilot-study preprint" src="https://img.shields.io/badge/status-pilot%20preprint-b7791f?style=flat-square">
   <img alt="Python 3.11 or newer" src="https://img.shields.io/badge/python-3.11%2B-17324d?style=flat-square">
@@ -201,7 +203,7 @@ analysis path uses Python 3.11+ and the standard library; pytest is required onl
 for the test suite.
 
 ```shell
-python -m pytest tests -q           # 67 passed
+python -m pytest tests -q           # 72 passed
 python scripts/verify_checksums.py  # 27/27 files verified
 python scripts/analyze_pilot.py     # regenerates the pilot analysis
 ```
@@ -241,7 +243,7 @@ the SVG files are not hand-edited.
 | 335-record feasibility cohort drawn but not coded | Documents a deviation from the planned design; contributes no result. |
 | 93.1% access rate comes from a purposive frame | The frame-wide access rate is unknown. |
 | Only documented adoption is measured | Execution of the recommended artifact is not verified. |
-| No registration, DOI, or peer review | The paper is a pilot-study preprint, not a peer-reviewed publication. |
+| No registration or peer review | The paper is a pilot-study preprint, not a peer-reviewed publication. The Zenodo DOI identifies the deposited preprint; it is not a registration DOI. |
 
 ### Component status
 
@@ -251,9 +253,10 @@ the SVG files are not hand-edited.
 | Coding rubric | Frozen at v1.1. |
 | Pilot data and analysis | Complete for 12 coded papers. |
 | Typeset paper | Complete as a 20-page pilot-study preprint; not peer reviewed. |
+| Preprint DOI | Zenodo, [10.5281/zenodo.24245000](https://doi.org/10.5281/zenodo.24245000). |
 | Full-scale data collection | Not executed. |
 | Human reliability | Not available. |
-| OSF registration / DOI | Not created. |
+| OSF registration | Not created; the Zenodo DOI covers the preprint and materials, not a preregistration. |
 | Submission | Not ready; see [`manuscript/submission/submission_checklist.md`](manuscript/submission/submission_checklist.md). |
 
 The next scientific step is the full study: a probability sample from the frozen
@@ -276,12 +279,11 @@ Scholar's terms. See [`reproducibility/licensing.md`](reproducibility/licensing.
 
 ## Citation
 
-If you use this material, cite the repository and preserve its pilot status:
+If you use this material, cite the preprint and preserve its pilot status:
 
 > Aman, S. A. (2026). *Does Benchmark Critique Diffuse into Evaluation Practice?
 > A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption* [Pilot-study
-> preprint]. GitHub.
-> https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol
+> preprint]. Zenodo. https://doi.org/10.5281/zenodo.24245000
 
 ```bibtex
 @misc{aman2026benchmarkcritique,
@@ -290,10 +292,17 @@ If you use this material, cite the repository and preserve its pilot status:
                   A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption},
   year         = {2026},
   month        = nov,
-  note         = {Pilot-study preprint; not peer reviewed},
-  howpublished = {\url{https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol}}
+  publisher    = {Zenodo},
+  version      = {1.0},
+  doi          = {10.5281/zenodo.24245000},
+  howpublished = {\url{https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/}},
+  url          = {https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol},
+  note         = {Pilot-study preprint; not peer reviewed}
 }
 ```
+
+Section 10.6 of the paper predates the deposit: its statement that no DOI has
+been obtained refers to the planned OSF registration, not to this Zenodo DOI.
 
 ## Repository map
 

@@ -82,7 +82,7 @@ Binary adoption = score 3. The pilot produced 1/6 primary-pair full adoption (16
 | 24-week retrieval phase, peak ~21 h/week | Verified (arithmetic) | `planning/execution_roadmap.md` |
 | No human second coder | **Unresolved** | No commitment record |
 | General-frame access rate | **Unknown** | Only the purposive 93.1% pilot |
-| OSF registration | **Not created** | No DOI |
+| OSF registration | **Not created** | No OSF DOI; Zenodo DOI 10.5281/zenodo.24245000 covers the preprint and materials. |
 | EvalPlus bibliographic record | Verified | NeurIPS 2023, DOI 10.52202/075280-0943, pp. 21558–21572 |
 | SWE-bench+ dataset | Verified | Zenodo 13879453, 548 instances, CC BY 4.0 |
 | SWE-bench+ peer-review status | **No record located; not exhaustive** | Describe as arXiv preprint |

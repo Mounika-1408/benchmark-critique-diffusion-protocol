@@ -75,12 +75,12 @@ python scripts/verify_checksums.py
 - No causal effect of critique on adoption.
 - No human inter-rater reliability.
 - No full-scale results.
-- No peer review, registration, or DOI.
+- No peer review or registration; the preprint has a Zenodo DOI (10.5281/zenodo.24245000).
 - No generalization of the 93.1% pilot access rate.
 
 ## What would make this a full study
 
-1. Register the protocol (OSF or equivalent) and obtain a DOI.
+1. Register the protocol (OSF or equivalent); the Zenodo DOI is not a registration DOI.
 2. Run a 50-record access pretest on the frozen frame.
 3. Draw the 900-paper stratified sample (or the documented stop-rule extension).
 4. Human double-code at least 20% of eligible papers; report human κ.

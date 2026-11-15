@@ -15,8 +15,8 @@ The table distinguishes what exists from what is missing.
 | Human second coder | **Not available** | Blocking for a prevalence claim. |
 | Human reliability statistics | **Not available** | Must not substitute LLM–LLM κ. |
 | Pre-specified sensitivity analyses | **Planned, not run** | Paper §14.5; no full data. |
-| OSF registration | **Not created** | Paper §19.6. |
-| DOI | **Not obtained** | Needed for data/code release. |
+| OSF registration | **Not created** | Paper §10.6. |
+| DOI | **Obtained** | Zenodo: `10.5281/zenodo.24245000` (preprint and materials). |
 
 ## 2. Manuscript package
 
@@ -66,7 +66,7 @@ The table distinguishes what exists from what is missing.
 
 1. No human second coder and no human reliability statistics.
 2. No full-scale sample, coding, or prevalence estimate.
-3. No registration or DOI.
+3. No registration; the Zenodo DOI covers the preprint but is not a preregistration.
 4. The manuscript is not peer reviewed.
 
 ## 6. Acceptable alternative
