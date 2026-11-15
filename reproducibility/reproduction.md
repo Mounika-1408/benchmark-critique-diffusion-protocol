@@ -19,11 +19,22 @@ python -m pytest tests -q
 The suite checks:
 
 - frame row count, strata, year counts, and SHA-256;
-- pilot flow, score distribution, eligibility, and reliability caveats;
+- pilot coding schema, flow, score distribution, eligibility, and reliability caveats;
 - Wilson intervals and exact-binomial diagnostics;
 - table and figure source data against the pilot table;
 - manuscript presence of key numbers and absence of placeholders;
 - checksum integrity.
+
+To validate the committed table or a new coding CSV without running the suite:
+
+```powershell
+python scripts/validate_coding.py pilot/pilot_coding_table.csv
+```
+
+The validator checks the [documented coding fields](data_dictionary.md#3-pilotpilot_coding_tablecsv),
+including eligibility, score, engagement and duplicate `paper_key` plus `critique`
+pairs. It reports each violation with the CSV row number (header = 1) and
+column, then exits with code 1. It does not modify the input file.
 
 ## 3. Recompute the pilot analysis
 

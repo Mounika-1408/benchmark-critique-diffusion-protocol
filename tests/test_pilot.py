@@ -5,9 +5,26 @@ from collections import Counter
 from pathlib import Path
 
 import analyze_pilot
+from validate_coding import validate_coding
 
 
 PRIMARY = {"evalplus", "swebenchplus"}
+
+
+def test_pilot_table_matches_coding_schema(root):
+    assert validate_coding(root / "pilot" / "pilot_coding_table.csv") == []
+
+
+def test_pilot_validator_reports_multiple_violations(root):
+    errors = validate_coding(root / "tests" / "fixtures" / "invalid_coding.csv")
+    assert [(row, column) for row, column, _ in errors] == [
+        (2, "score"),
+        (2, "engagement"),
+        (2, "independent_remediation"),
+        (2, "ineligibility_reason"),
+        (3, "score"),
+        (3, "paper_key"),
+    ]
 
 
 def test_pilot_row_and_eligibility_counts(pilot_rows):

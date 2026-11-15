@@ -1,0 +1,3 @@
+paper_key,title,venue,year,critique,eligible,ineligibility_reason,score,engagement,independent_remediation,evidence_quote,notes
+synthetic,Synthetic paper,,unknown,evalplus,true,NO_EVAL,4,3,maybe,Example evidence,Example rationale
+synthetic,Synthetic paper,,unknown,evalplus,false,NO_EVAL,1,0,false,Example evidence,Example rationale
