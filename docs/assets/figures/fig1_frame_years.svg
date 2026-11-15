@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" role="img" aria-labelledby="fig1-title fig1-desc">
+<title id="fig1-title">Frozen citation frame by publication year</title>
+<desc id="fig1-desc">Bar chart of 2,666 title clusters: 2022, 2; 2023, 119; 2024, 526; 2025, 838; 2026, 1,139; unknown, 42.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="0" y="0" width="900" height="4" fill="#0f766e"/>
+<text x="56" y="38" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f766e" text-anchor="start" letter-spacing="1.8">FIGURE 1  /  CITATION FRAME</text>
+<text x="56" y="69" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43" text-anchor="start">The frozen citation frame</text>
+<text x="56" y="92" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="400" fill="#627d98" text-anchor="start">2,666 title-level citing works, by publication year</text>
+<line x1="56" y1="112" x2="844" y2="112" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="710" y="22" width="134" height="62" rx="8" fill="#f7fafc" stroke="#d9e2ec" stroke-width="1"/>
+<text x="777" y="50" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#102a43" text-anchor="middle">2,666</text>
+<text x="777" y="68" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#627d98" text-anchor="middle" letter-spacing="1.2">TITLE CLUSTERS</text>
+<line x1="76" y1="352.0" x2="870" y2="352.0" stroke="#d9e2ec" stroke-width="1"/>
+<text x="64" y="356.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#627d98" text-anchor="end">0</text>
+<line x1="76" y1="302.0" x2="870" y2="302.0" stroke="#d9e2ec" stroke-width="1"/>
+<text x="64" y="306.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#627d98" text-anchor="end">300</text>
+<line x1="76" y1="252.0" x2="870" y2="252.0" stroke="#d9e2ec" stroke-width="1"/>
+<text x="64" y="256.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#627d98" text-anchor="end">600</text>
+<line x1="76" y1="202.0" x2="870" y2="202.0" stroke="#d9e2ec" stroke-width="1"/>
+<text x="64" y="206.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#627d98" text-anchor="end">900</text>
+<line x1="76" y1="152.0" x2="870" y2="152.0" stroke="#d9e2ec" stroke-width="1"/>
+<text x="64" y="156.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#627d98" text-anchor="end">1,200</text>
+<rect x="76.0" y="351.6666666666667" width="78" height="0.33333333333333337" rx="5" fill="#0f766e"/>
+<text x="115.0" y="341.6666666666667" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#102a43" text-anchor="middle">2</text>
+<text x="115.0" y="374" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">2022</text>
+<rect x="219.2" y="332.1666666666667" width="78" height="19.833333333333332" rx="5" fill="#0f766e"/>
+<text x="258.2" y="322.1666666666667" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#102a43" text-anchor="middle">119</text>
+<text x="258.2" y="374" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">2023</text>
+<rect x="362.4" y="264.3333333333333" width="78" height="87.66666666666667" rx="5" fill="#0f766e"/>
+<text x="401.4" y="254.33333333333331" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#102a43" text-anchor="middle">526</text>
+<text x="401.4" y="374" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">2024</text>
+<rect x="505.59999999999997" y="212.33333333333331" width="78" height="139.66666666666669" rx="5" fill="#0f766e"/>
+<text x="544.5999999999999" y="202.33333333333331" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#102a43" text-anchor="middle">838</text>
+<text x="544.5999999999999" y="374" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">2025</text>
+<rect x="648.8" y="162.16666666666666" width="78" height="189.83333333333334" rx="5" fill="#b7791f"/>
+<text x="687.8" y="152.16666666666666" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#102a43" text-anchor="middle">1,139</text>
+<text x="687.8" y="374" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">2026*</text>
+<rect x="792.0" y="345.0" width="78" height="7.000000000000001" rx="5" fill="#cbd5e1"/>
+<text x="831.0" y="335.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#334e68" text-anchor="middle">42</text>
+<text x="831.0" y="374" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">Unknown</text>
+<line x1="76" y1="352" x2="870" y2="352" stroke="#334e68" stroke-width="1.2"/>
+<text x="56" y="388" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="start">* 2026 is incomplete and includes 231 future-dated records. 42 clusters have no publication year.</text>
+<text x="56" y="404" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="start">Source: manuscript/figures/fig1_frame_years.csv.</text>
+</svg>

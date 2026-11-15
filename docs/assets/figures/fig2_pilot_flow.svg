@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="360" viewBox="0 0 1160 360" role="img" aria-labelledby="fig2-title fig2-desc">
+<title id="fig2-title">Pilot flow from 29 purposively selected papers to 6 primary-pair eligible papers</title>
+<desc id="fig2-desc">Flow diagram: 29 papers in the purposive frame, 27 accessible, 12 coded, 8 eligible for all pairs, and 6 eligible for the two primary pairs.</desc>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<rect x="0" y="0" width="1160" height="4" fill="#0f766e"/>
+<text x="56" y="38" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#0f766e" text-anchor="start" letter-spacing="1.8">FIGURE 2  /  PILOT FLOW</text>
+<text x="56" y="69" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="22" font-weight="700" fill="#102a43" text-anchor="start">From access to analysis</text>
+<text x="56" y="92" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="400" fill="#627d98" text-anchor="start">A purposive 29-paper pilot, narrowing to six primary-pair papers</text>
+<line x1="56" y1="112" x2="1104" y2="112" stroke="#d9e2ec" stroke-width="1"/>
+<rect x="970" y="22" width="134" height="62" rx="8" fill="#f7fafc" stroke="#d9e2ec" stroke-width="1"/>
+<text x="1037" y="50" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="20" font-weight="700" fill="#102a43" text-anchor="middle">93.1%</text>
+<text x="1037" y="68" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="600" fill="#627d98" text-anchor="middle" letter-spacing="1.2">ACCESS RATE</text>
+<rect x="36" y="156" width="194" height="104" rx="9" fill="#f7fafc" stroke="#d9e2ec" stroke-width="1"/>
+<text x="52" y="179" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#627d98" text-anchor="start" letter-spacing="1.3">STEP 01</text>
+<text x="133.0" y="222" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="700" fill="#102a43" text-anchor="middle">29</text>
+<text x="133.0" y="244" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">Purposive access frame</text>
+<text x="133.0" y="277" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="middle">selected for coverage</text>
+<line x1="237" y1="208.0" x2="251" y2="208.0" stroke="#627d98" stroke-width="1.5"/>
+<polygon points="251,208.0 245,203.5 245,212.5" fill="#627d98"/>
+<rect x="260" y="156" width="194" height="104" rx="9" fill="#f7fafc" stroke="#d9e2ec" stroke-width="1"/>
+<text x="276" y="179" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#627d98" text-anchor="start" letter-spacing="1.3">STEP 02</text>
+<text x="357.0" y="222" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="700" fill="#102a43" text-anchor="middle">27</text>
+<text x="357.0" y="244" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">Full text accessible</text>
+<text x="357.0" y="277" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="middle">93.1% of the frame</text>
+<line x1="461" y1="208.0" x2="475" y2="208.0" stroke="#627d98" stroke-width="1.5"/>
+<polygon points="475,208.0 469,203.5 469,212.5" fill="#627d98"/>
+<rect x="484" y="156" width="194" height="104" rx="9" fill="#f7fafc" stroke="#d9e2ec" stroke-width="1"/>
+<text x="500" y="179" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#627d98" text-anchor="start" letter-spacing="1.3">STEP 03</text>
+<text x="581.0" y="222" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="700" fill="#102a43" text-anchor="middle">12</text>
+<text x="581.0" y="244" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">Coded with rubric</text>
+<text x="581.0" y="277" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="middle">rubric v1.0; 4 ineligible</text>
+<line x1="685" y1="208.0" x2="699" y2="208.0" stroke="#627d98" stroke-width="1.5"/>
+<polygon points="699,208.0 693,203.5 693,212.5" fill="#627d98"/>
+<rect x="708" y="156" width="194" height="104" rx="9" fill="#f7fafc" stroke="#d9e2ec" stroke-width="1"/>
+<text x="724" y="179" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#627d98" text-anchor="start" letter-spacing="1.3">STEP 04</text>
+<text x="805.0" y="222" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="700" fill="#102a43" text-anchor="middle">8</text>
+<text x="805.0" y="244" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">Eligible, all pairs</text>
+<text x="805.0" y="277" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="middle">+2 GSM1k rows</text>
+<line x1="909" y1="208.0" x2="923" y2="208.0" stroke="#627d98" stroke-width="1.5"/>
+<polygon points="923,208.0 917,203.5 917,212.5" fill="#627d98"/>
+<rect x="932" y="156" width="194" height="104" rx="9" fill="#e6f4f1" stroke="#0f766e" stroke-width="1.6"/>
+<text x="948" y="179" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="8.5" font-weight="700" fill="#0f766e" text-anchor="start" letter-spacing="1.3">STEP 05</text>
+<text x="1029.0" y="222" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="34" font-weight="700" fill="#0f766e" text-anchor="middle">6</text>
+<text x="1029.0" y="244" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="600" fill="#334e68" text-anchor="middle">Eligible, primary pairs</text>
+<text x="1029.0" y="277" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="middle">6 of the 8 all-pair papers</text>
+<text x="56" y="322" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="start">Purposive pilot, not a probability sample. The 93.1% access rate applies only to this 29-paper frame.</text>
+<text x="56" y="338" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#627d98" text-anchor="start">Source: pilot/pilot_summary.md and analysis/pilot_results.json.</text>
+</svg>

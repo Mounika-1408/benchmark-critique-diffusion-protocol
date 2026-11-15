@@ -2,10 +2,12 @@
 
 **A pilot-based study of EvalPlus and SWE-bench+ adoption in code-generation evaluation**
 
+**Research website:** [p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol](https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/)
+
 <p align="center">
   <img alt="Status: pilot-based research draft" src="https://img.shields.io/badge/status-pilot--based%20draft-b7791f?style=flat-square">
   <img alt="Python 3.11 or newer" src="https://img.shields.io/badge/python-3.11%2B-17324d?style=flat-square">
-  <img alt="52 tests passing" src="https://img.shields.io/badge/tests-52%20passing-0f766e?style=flat-square">
+  <img alt="67 tests passing" src="https://img.shields.io/badge/tests-67%20passing-0f766e?style=flat-square">
   <img alt="Code license: MIT" src="https://img.shields.io/badge/code%20license-MIT-2f855a?style=flat-square">
   <img alt="Data license: CC BY 4.0" src="https://img.shields.io/badge/data%20license-CC%20BY%204.0-2c7a7b?style=flat-square">
 </p>
@@ -184,7 +186,7 @@ analysis path uses Python 3.11+ and the standard library; pytest is required onl
 for the test suite.
 
 ```shell
-python -m pytest tests -q           # 52 passed
+python -m pytest tests -q           # 67 passed
 python scripts/verify_checksums.py  # 27/27 files verified
 python scripts/analyze_pilot.py     # regenerates the pilot analysis
 ```
@@ -288,6 +290,7 @@ If you use this material, cite the repository and preserve its pilot status:
 | [`manuscript/tables/`](manuscript/tables/) | Six generated tables in Markdown and CSV. |
 | [`manuscript/figures/`](manuscript/figures/) | Three generated SVG figures and source CSVs. |
 | [`manuscript/submission/`](manuscript/submission/) | Venue comparison, cover-letter draft, checklist, and reviewer expertise. |
+| [`docs/`](docs/) | Static research website, published with GitHub Pages from `main` `/docs`. |
 | [`PROTOCOL.md`](PROTOCOL.md) | Research protocol and planned full-scale design. |
 | [`rubric_v1.1.md`](rubric_v1.1.md) | Frozen coding instrument and boundary rules. |
 | [`pilot/pilot_coding_table.csv`](pilot/pilot_coding_table.csv) | Authoritative 12-row pilot coding table. |
@@ -296,7 +299,7 @@ If you use this material, cite the repository and preserve its pilot status:
 | [`data/frame_summary.json`](data/frame_summary.json) | Frame counts, coverage, and SHA-256 hashes. |
 | [`reproducibility/`](reproducibility/) | Data dictionary, provenance, sampling, environment, licensing, checksums, and reproduction. |
 | [`scripts/`](scripts/) | Frame construction, sampling, pilot analysis, table and figure generation, and checksum verification. |
-| [`tests/`](tests/) | Integrity and consistency tests for the frame, pilot, tables, figures, and manuscript. |
+| [`tests/`](tests/) | Integrity and consistency tests for the frame, pilot, tables, figures, manuscript, and research website. |
 | [`verification/`](verification/) | Source verification and journal-requirement records. |
 | [`planning/`](planning/) | Feasibility, roadmap, risks, and decision record. |
 | [`RESEARCH_PORTFOLIO.md`](RESEARCH_PORTFOLIO.md) | One-page research portfolio summary. |

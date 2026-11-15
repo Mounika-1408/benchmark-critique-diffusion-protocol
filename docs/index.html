@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benchmark Critique Diffusion — Pilot Study</title>
+  <meta name="description" content="A pilot-based study of whether papers citing EvalPlus and SWE-bench+ adopt the critiques' remediations in their own evaluations.">
+  <meta name="author" content="Syed Abdul Aman">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Does Benchmark Critique Diffuse into Evaluation Practice?">
+  <meta property="og:description" content="A pilot-based study of EvalPlus and SWE-bench+ adoption. Citation, acknowledgment, and adoption are not the same thing.">
+  <meta property="og:url" content="https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/">
+  <meta property="og:image" content="https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/assets/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Title card for the Benchmark Critique Diffusion pilot study.">
+  <meta property="article:published_time" content="2026-11-13">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Does Benchmark Critique Diffuse into Evaluation Practice?">
+  <meta name="twitter:description" content="A pilot-based study of EvalPlus and SWE-bench+ adoption. Not a prevalence estimate.">
+  <meta name="twitter:image" content="https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/assets/social-card.png">
+  <meta name="theme-color" content="#f5f1e8">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Does Benchmark Critique Diffuse into Evaluation Practice? A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption",
+    "headline": "Does Benchmark Critique Diffuse into Evaluation Practice?",
+    "author": {
+      "@type": "Person",
+      "name": "Syed Abdul Aman"
+    },
+    "dateCreated": "2026-11-13",
+    "creativeWorkStatus": "Pilot-based research draft; not peer reviewed; not a prevalence estimate",
+    "abstract": "A pilot-based study of whether papers citing benchmark critiques document adopting the critiques' remediations in their own primary evaluations.",
+    "url": "https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/",
+    "codeRepository": "https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "keywords": "benchmark evaluation, benchmark critique, EvalPlus, SWE-bench+, citation diffusion, meta-research, reproducibility"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the research</a>
+
+  <header class="site-header">
+    <div class="wrap masthead-top">
+      <a class="wordmark" href="./" aria-label="BC Benchmark Critique Diffusion, home">
+        <span class="monogram" aria-hidden="true">BC</span>
+        <span>Benchmark Critique<br>Diffusion</span>
+      </a>
+      <div class="top-links">
+        <span class="status">Pilot draft · Not peer reviewed</span>
+        <span class="divider" aria-hidden="true"></span>
+        <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+
+    <div class="wrap hero">
+      <p class="kicker">
+        <span>Working paper</span>
+        <span class="kicker-sep" aria-hidden="true"></span>
+        <span>Meta-research</span>
+        <span class="kicker-date">13 November 2026</span>
+      </p>
+
+      <h1>
+        <span class="title-line">Does Benchmark Critique</span>
+        <span class="title-line">Diffuse into Evaluation Practice?</span>
+      </h1>
+      <p class="hero-sub">A pilot-based study of EvalPlus and SWE-bench+ adoption</p>
+
+      <div class="hero-grid">
+        <div>
+          <p class="deck">
+            Benchmark critiques release stronger tests and cleaner datasets. This project asks a narrower question than citation counts can answer: when a paper cites the critique, does its own evaluation actually change?
+          </p>
+          <div class="hero-actions">
+            <a class="text-link" href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/manuscript/paper.md">Read the manuscript <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol">Code and data <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="cite.bib" download>Download BibTeX <span class="arrow" aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <dl class="paper-meta" aria-label="Study metadata">
+          <div>
+            <dt>Author</dt>
+            <dd>Syed Abdul Aman <span>Independent researcher</span></dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Draft v0.1 <span>Pilot-based; not a full-scale study</span></dd>
+          </div>
+          <div>
+            <dt>Frame</dt>
+            <dd>2,666 title clusters <span>Semantic Scholar snapshot, 13 Nov 2026</span></dd>
+          </div>
+          <div>
+            <dt>Pilot</dt>
+            <dd>29 selected · 27 accessible <span>12 coded · 6 primary-pair eligible</span></dd>
+          </div>
+          <div>
+            <dt>Venue</dt>
+            <dd>Not submitted <span>No registration or DOI</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <aside class="status-note" aria-label="What this draft does not claim">
+        <strong>Read this first</strong>
+        <p>
+          This is a pilot, not a prevalence estimate. The eligible samples are six and eight papers. The agreement statistics are <em>LLM–LLM</em>, not human reliability. The 900-paper full study is specified but <em>not executed</em>. The draft has not been peer reviewed and should not be cited as evidence about how often evaluation practice changes.
+        </p>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="section-nav" aria-label="Section navigation">
+    <div class="wrap nav-inner">
+      <a class="nav-link" href="#overview">Overview</a>
+      <a class="nav-link" href="#questions">Questions</a>
+      <a class="nav-link" href="#background">Background</a>
+      <a class="nav-link" href="#method">Method</a>
+      <a class="nav-link" href="#results">Results</a>
+      <a class="nav-link" href="#reliability">Reliability</a>
+      <a class="nav-link" href="#reproduce">Reproduce</a>
+      <a class="nav-link" href="#references">References</a>
+      <a class="nav-link" href="#cite">Cite</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="section" id="overview" aria-labelledby="overview-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">01</span>
+          <span class="rail-label">Overview</span>
+        </div>
+        <div class="content abstract">
+          <p class="eyebrow">Abstract</p>
+          <h2 id="overview-title">Citation is not the same as use.</h2>
+          <p class="lead">
+            Benchmark critiques identify concrete defects in widely used evaluations and release remediations, but citation counts do not show whether citing papers change their evaluation practice. This pilot-based study asks what proportion of papers citing a benchmark critique document adopting its recommended benchmark artifact or protocol in their own primary evaluation.
+          </p>
+          <p>
+            The primary pairs are EvalPlus → HumanEval/MBPP and SWE-bench+ → SWE-bench. We combine a frozen citation frame of 2,666 title clusters with a purposive 29-paper pilot: 27 full texts were accessible, 12 papers were coded, 8 were eligible for the all-pair set, and 6 for the two primary pairs. Rubric v1.1 separates citation only (0), acknowledgment (1), partial adoption (2), and full adoption (3).
+          </p>
+          <p>
+            One of six primary-pair papers (1/6) fully adopted the remediation (16.7%; Wilson 95% CI 3.0–56.4); the all-pair estimate was 1/8 (12.5%; 2.2–47.1). Three of six primary-pair papers independently remediated the benchmark without adopting the critique's artifact. None of the three SWE-bench+ cases adopted the 548-instance dataset. Agreement statistics are LLM–LLM only (ordinal κ = 0.78 unweighted, 0.86 linear weighted) and are not human reliability.
+          </p>
+          <p>
+            Because the pilot is purposive and tiny, we do not estimate population prevalence or causal diffusion. The contribution is a transparent measurement instrument, boundary rules, and a pilot-based demonstration that citation, acknowledgment, and adoption are empirically distinct.
+          </p>
+          <p class="keywords">
+            <strong>Keywords</strong> · benchmark evaluation · benchmark critique · EvalPlus · SWE-bench+ · citation diffusion · meta-research · reproducibility · code generation
+          </p>
+
+          <div class="ledger" role="group" aria-label="Pilot results at a glance">
+            <div class="ledger-item">
+              <span class="ledger-value">1<span class="slash">/</span>6</span>
+              <span class="ledger-label">primary-pair papers fully adopted the remediation</span>
+              <span class="ledger-note">16.7%; Wilson 95% CI 3.0–56.4%</span>
+            </div>
+            <div class="ledger-item">
+              <span class="ledger-value">3<span class="slash">/</span>6</span>
+              <span class="ledger-label">primary-pair papers independently remediated the benchmark</span>
+              <span class="ledger-note">Without adopting the critique's artifact</span>
+            </div>
+            <div class="ledger-item">
+              <span class="ledger-value">0<span class="slash">/</span>3</span>
+              <span class="ledger-label">SWE-bench+ papers adopted the 548-instance dataset</span>
+              <span class="ledger-note">All three did some form of independent remediation</span>
+            </div>
+          </div>
+          <p class="small-note">
+            These are counts from a purposive pilot. They demonstrate that the categories can be distinguished; they do not estimate a rate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="questions" aria-labelledby="questions-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">02</span>
+          <span class="rail-label">Questions</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Motivation</p>
+          <h2 id="questions-title">A citation can signal awareness without saying anything about practice.</h2>
+          <p>
+            Code-generation benchmarks are routinely used to support claims about model progress. They are also routinely criticized. HumanEval and MBPP use small sets of hand-written tests; stronger tests expose programs that the original tests pass. SWE-bench and its variants can reward patches that exploit solution leakage or pass weak tests, and filtering the instance set changes measured resolution rates.
+          </p>
+          <p>
+            Those critiques are not only complaints. They release concrete remediations: augmented test suites, filtered datasets, and strengthened protocols. The open question is what happens next. A paper can cite a critique in related work, acknowledge that a benchmark has known problems, and then report its main result on the original benchmark unchanged. Citation counts cannot separate that paper from one that rebuilt its evaluation around the remediation.
+          </p>
+
+          <p class="pullquote">
+            A citation can mean the authors know the tests are imperfect. It does not tell us whether they changed anything.
+          </p>
+
+          <div class="research-question">
+            <p class="rq-label">Primary research question</p>
+            <p class="rq-text">
+              Among research papers that cite a benchmark-remediation critique, what proportion document adopting the critique's recommended benchmark or protocol in their own evaluation of the criticized benchmark?
+            </p>
+          </div>
+
+          <p>
+            Five secondary questions organize the descriptive work. They are deliberately modest: the pilot can test whether the categories are usable, not whether adoption varies by venue, time, or critique type.
+          </p>
+          <ol class="sq-list">
+            <li><span class="sq-id">SQ1</span><span>What is the distribution of engagement with the critique: citation only, acknowledged, partial adoption, or full adoption?</span></li>
+            <li><span class="sq-id">SQ2</span><span>Does documented adoption differ between EvalPlus and SWE-bench+? The SWE-bench+ stratum is too small for a confirmatory test.</span></li>
+            <li><span class="sq-id">SQ3</span><span>Is adoption more common in later papers, peer-reviewed venues, or papers with author overlap? This is exploratory and is not analyzed in the pilot.</span></li>
+            <li><span class="sq-id">SQ4</span><span>How often do citing papers perform independent remediation without adopting the critique's artifact?</span></li>
+            <li><span class="sq-id">SQ5</span><span>How sensitive would an estimate be to access failure, self-citation, benchmark version, and the treatment of partial adoption?</span></li>
+          </ol>
+
+          <p>
+            Two hypotheses were pre-specified for the full study: full adoption below 25%, and most eligible papers scoring 0 or 1. Neither is declared supported or rejected here. The exact-binomial diagnostics at n = 6 are reported only to show why the pilot cannot settle them. The contrast between EvalPlus and SWE-bench+ is exploratory, and the time and venue hypotheses are not analyzed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">03</span>
+          <span class="rail-label">Background</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Benchmarks and remediations</p>
+          <h2 id="background-title">Two critiques, two very different adoption costs.</h2>
+          <p>
+            EvalPlus targets HumanEval and MBPP. It releases HumanEval+ and MBPP+ with augmented tests and a public harness. For a lab already running HumanEval, adoption is close to a drop-in substitution: install the harness, run the augmented tests, report the pass rate. SWE-bench+ targets SWE-bench, SWE-bench Lite, and SWE-bench Verified. Its remediation is a 548-instance curated dataset and a strengthened-test protocol. Adopting it means changing the instance set, reconciling a harness, and re-running agents. The comparison is useful because both artifacts are public and licensed, but their integration costs are not alike.
+          </p>
+          <p>
+            GSM1k → GSM8K is retained as a secondary task-fit contrast only. It is a parallel arithmetic benchmark, not a drop-in replacement, and its dataset card leaves the license field blank. It is excluded from the primary denominator.
+          </p>
+
+          <div class="table-block">
+            <p class="table-caption" id="t1-caption"><span class="table-no">Table 1</span> Benchmark pairs and remediation characteristics.<span class="scroll-hint">Scroll sideways for all columns.</span></p>
+            <div class="table-wrap table--wide" tabindex="0" role="region" aria-labelledby="t1-caption">
+              <table aria-describedby="t1-note">
+                <thead>
+                  <tr>
+                    <th scope="col">Pair</th>
+                    <th scope="col">Critique</th>
+                    <th scope="col">Criticized benchmark</th>
+                    <th scope="col">Recommended practice</th>
+                    <th scope="col">Artifact and license</th>
+                    <th scope="col">Adoption cost</th>
+                    <th scope="col">Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>P1</td>
+                    <td>EvalPlus (Liu et al., 2023)</td>
+                    <td>HumanEval; MBPP</td>
+                    <td>HumanEval+ / MBPP+ augmented tests as the primary evaluation</td>
+                    <td>Public GitHub harness; Apache-2.0; 80× HumanEval tests, 35× MBPP tests; 378 MBPP+ tasks</td>
+                    <td>Low: drop-in test suite and harness</td>
+                    <td>Primary</td>
+                  </tr>
+                  <tr>
+                    <td>P2</td>
+                    <td>SWE-bench+ (Aleithan et al., 2024)</td>
+                    <td>SWE-bench; SWE-bench Lite; SWE-bench Verified</td>
+                    <td>548-instance curated dataset and/or strengthened-test protocol as the primary evaluation</td>
+                    <td>Public Zenodo dataset; CC BY 4.0; 548 instances</td>
+                    <td>High: filtered instances, harness reconciliation, agent re-runs</td>
+                    <td>Primary</td>
+                  </tr>
+                  <tr>
+                    <td>S1</td>
+                    <td>GSM1k (Zhang et al., 2024)</td>
+                    <td>GSM8K</td>
+                    <td>GSM1k or a fully equivalent contamination-controlled replication</td>
+                    <td>Public Hugging Face dataset; 1,205 rows; license field blank</td>
+                    <td>Medium: parallel benchmark, not a drop-in replacement</td>
+                    <td>Secondary only; excluded from the primary denominator</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note" id="t1-note">Artifact facts are verified in the repository's source verification log. Cost is an analytic characterization, not a measured implementation time.</p>
+          </div>
+
+          <p>
+            The study sits between two literatures. Work on citation as a concept symbol shows that a reference signals participation in a conversation, not implementation of a specific claim (Small, 1978). Diffusion research treats adoption as a process with awareness, decision, implementation, and confirmation, and notes that adopters may reinvent an innovation rather than implement it as specified (Rogers, 2003). Benchmark-quality work such as BetterBench asks how good a benchmark is (Reuel et al., 2024); this project asks whether a critique of that benchmark changes later evaluation practice. The closest prior materials study non-English NLP benchmarks and their accessibility (Merzah, 2026, unpublished replication materials). The domain, outcome, and contrast here are different.
+          </p>
+          <p>
+            The new element is not the observation that some papers cite without using. It is the combination of a citation frame built from all citing works, an ordinal rubric with verbatim evidence and boundary rules, a low-cost versus high-cost remediation contrast, and a frozen frame that can be audited. The pilot tests whether that combination is workable. It does not establish that the resulting estimate would be precise or generalizable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method" aria-labelledby="method-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">04</span>
+          <span class="rail-label">Method</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Study design</p>
+          <h2 id="method-title">A frozen frame, a small pilot, and a plan that has not been run.</h2>
+          <p>
+            The project has three components. Keeping them separate matters: the frame is a real, frozen dataset; the pilot is a real but purposive test of the coding instrument; the full study is a design document.
+          </p>
+
+          <ol class="design-list">
+            <li>
+              <div>
+                <strong>Frame construction</strong>
+                <p>A Semantic Scholar citation snapshot retrieved on 13 November 2026: 2,572 EvalPlus citation rows and 136 SWE-bench+ citation rows, reduced to 2,666 title clusters.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Pilot</strong>
+                <p>A purposive 29-paper access frame, 27 accessible full texts, 12 coded papers, 8 eligible for all pairs, and 6 eligible for the two primary pairs. The pilot tests access, coding, and the rubric.</p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>Full-study plan</strong>
+                <p>A stratified design of 900 invited papers with a stop rule, a pre-specified analysis plan, and 20% human double-coding. It has not been executed.</p>
+              </div>
+            </li>
+          </ol>
+
+          <h3>The frame is a snapshot, not a census</h3>
+          <p>
+            The raw retrieval sums to 2,708 rows. An identifier union-find merged records sharing a DOI, arXiv ID, DBLP key, CorpusId, or Semantic Scholar paperId, producing 2,684 records. That is an intermediate count. Normalized-title clustering then produced 2,666 clusters, with 14 multi-variant clusters accounting for 18 extra rows.
+          </p>
+          <p>
+            The final frame has 135 clusters in the SWE-bench+ census stratum (112 SWE-only plus 23 citing both critiques) and 2,531 in the EvalPlus-only stratum. The 23 both-critique clusters are assigned to the small stratum so that it is a complete census. The 2026 portion is incomplete and includes 231 records with future-dated publication metadata. The frame misses non-indexed work, and title clustering can merge distinct papers with identical titles.
+          </p>
+
+          <figure class="research-figure">
+            <div class="figure-frame">
+              <img src="assets/figures/fig1_frame_years.svg" width="900" height="420" alt="Bar chart of the frozen citation frame: 2,666 title clusters by publication year. 2022: 2; 2023: 119; 2024: 526; 2025: 838; 2026: 1,139; unknown: 42.">
+            </div>
+            <figcaption>
+              <span><strong>Figure 1.</strong> The frozen citation frame by publication year. The 2026 bar is incomplete and includes future-dated records.</span>
+              <span class="figure-source">Source data: <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/manuscript/figures/fig1_frame_years.csv">fig1_frame_years.csv</a></span>
+            </figcaption>
+          </figure>
+
+          <div class="table-block">
+            <p class="table-caption" id="t2-caption"><span class="table-no">Table 2</span> Frozen citation-frame profile.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-labelledby="t2-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Quantity</th>
+                    <th scope="col" class="num">Count</th>
+                    <th scope="col">Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Raw EvalPlus citation rows</td><td class="num">2,572</td><td>Semantic Scholar reports 2,573; one row was not returned.</td></tr>
+                  <tr><td>Raw SWE-bench+ citation rows</td><td class="num">136</td><td>Semantic Scholar reports 136.</td></tr>
+                  <tr><td>Identifier-deduplicated union</td><td class="num">2,684</td><td>Intermediate count; not the analysis frame.</td></tr>
+                  <tr><td>Title-deduplicated clusters</td><td class="num"><strong>2,666</strong></td><td>Frozen analysis frame.</td></tr>
+                  <tr><td>SWE-bench+ census stratum</td><td class="num">135</td><td>Includes 23 clusters citing both critiques.</td></tr>
+                  <tr><td>EvalPlus-only sample stratum</td><td class="num">2,531</td><td>Sampled in the planned main design.</td></tr>
+                  <tr><td>Clusters citing both critiques</td><td class="num">23</td><td>Assigned to the SWE-bench+ census.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h3>The pilot was selected for coverage, not representation</h3>
+          <p>
+            The pilot used a purposive 29-paper access frame assembled to cover different benchmarks and likely adoption levels. Twenty-seven full texts were accessible (93.1%), and 12 papers were coded. Four of the 12 were ineligible because they did not evaluate the criticized benchmark. Fifteen of the 27 accessible papers were not coded after category saturation. The two inaccessible papers were not coded and are not counted as non-adopters.
+          </p>
+          <p>
+            Eligibility was decided before scoring. A paper had to report empirical results on HumanEval, MBPP, SWE-bench, SWE-bench Lite, or SWE-bench Verified; contain a bibliographic citation to the critique or its official artifact; and be available as an English full text with enough methods and results detail to code. Derivative-only papers, such as those evaluating SWE-bench Pro, were ineligible rather than scored as non-adopters.
+          </p>
+
+          <figure class="research-figure">
+            <div class="figure-frame">
+              <img src="assets/figures/fig2_pilot_flow.svg" width="1160" height="360" alt="Flow diagram: 29 papers in the purposive frame, 27 accessible, 12 coded, 8 eligible for all pairs, and 6 eligible for the two primary pairs.">
+            </div>
+            <figcaption>
+              <span><strong>Figure 2.</strong> Pilot flow from the 29-paper purposive frame to the 6 primary-pair eligible papers. The 93.1% access rate applies only to this selected frame.</span>
+              <span class="figure-source">Source data: <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/manuscript/figures/fig2_pilot_flow.csv">fig2_pilot_flow.csv</a></span>
+            </figcaption>
+          </figure>
+
+          <div class="table-block">
+            <p class="table-caption" id="t3-caption"><span class="table-no">Table 3</span> Pilot flow and eligibility.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-labelledby="t3-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Stage</th>
+                    <th scope="col" class="num">n</th>
+                    <th scope="col">Note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Purposive access frame</td><td class="num">29</td><td>Selected for construct coverage, not randomly.</td></tr>
+                  <tr><td>Full text accessible</td><td class="num">27</td><td>93.1% of the purposive frame; not generalizable.</td></tr>
+                  <tr><td>Coded with rubric</td><td class="num">12</td><td>Evidence quotes recorded.</td></tr>
+                  <tr><td>Eligible, all pairs</td><td class="num">8</td><td>Includes two GSM1k secondary rows.</td></tr>
+                  <tr><td>Eligible, primary pairs</td><td class="num">6</td><td>EvalPlus and SWE-bench+ only.</td></tr>
+                  <tr><td>Ineligible</td><td class="num">4</td><td>Mostly no evaluation of the criticized benchmark.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <h3>Documented adoption is an ordinal construct</h3>
+          <p>
+            The outcome is what a paper's text, tables, or captions state about its own evaluation. It is not citation frequency, agreement with the critique, general evaluation quality, independent remediation, or verified execution of the artifact. Rubric v1.1 assigns one score per citing paper and critique:
+          </p>
+
+          <div class="table-block">
+            <p class="table-caption" id="t4-caption"><span class="table-no">Rubric</span> The four-level adoption ladder.<span class="scroll-hint">Scroll sideways for all columns.</span></p>
+            <div class="table-wrap table--wide" tabindex="0" role="region" aria-labelledby="t4-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col" class="num">Score</th>
+                    <th scope="col">Label</th>
+                    <th scope="col">What is present</th>
+                    <th scope="col">What is absent</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="num">0</td><td>Citation only</td><td>A bibliographic citation; the criticized benchmark is used unchanged.</td><td>Any specific discussion of the critique's finding or recommendation.</td></tr>
+                  <tr><td class="num">1</td><td>Acknowledged</td><td>A specific statement of the critique's finding.</td><td>Any use of the recommended artifact or protocol.</td></tr>
+                  <tr><td class="num">2</td><td>Partial adoption</td><td>At least one recommended practice, but not for the main evaluation.</td><td>The core artifact or protocol supporting a main claim.</td></tr>
+                  <tr><td class="num"><strong>3</strong></td><td><strong>Full adoption</strong></td><td>The core artifact or protocol supports at least one main table, figure, or claim.</td><td>Nothing further is required under the rubric.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">The binary primary outcome is full adoption (score 3). Scores 0–2 are non-adoption for the primary estimate; partial adoption is reported separately.</p>
+          </div>
+
+          <p>
+            Five boundary rules do most of the work. A reference-list entry alone is 0. Generic contamination or leakage talk is 0 unless the critique's specific finding is stated. Acknowledgment requires that specific statement while leaving the evaluation unchanged. Independent remediation is not adoption; it is coded separately and cannot raise a score. Full adoption requires the remediated artifact or protocol to support a main claim, not an appendix or robustness check. Derivative-only papers are ineligible.
+          </p>
+          <p>
+            Each score of 1 or higher required a verbatim evidence quote of at most 60 words and a section or table locator. Scores could not be assigned from an abstract alone. The pilot table records short quotes for most cases but does not record page numbers for every quote, which is a limitation to fix in the full study.
+          </p>
+
+          <div class="caveat">
+            <p class="caveat-label">The full study is a plan</p>
+            <p>
+              The designed study would invite 900 papers: a census of the 135-cluster SWE-bench+ stratum and a random sample of 765 from the 2,531 EvalPlus-only clusters. Under planning assumptions of 80% access, 18% eligibility, and p = 0.125, that would yield about 130 eligible papers and a Wilson interval of roughly 7.7–19.1%. If fewer than 120 eligible papers were found, blocks of 100 would be added up to a hard cap of 1,200 invited.
+            </p>
+            <p>
+              None of this was executed. A 335-record feasibility cohort was drawn, but retrieval was halted before completion and no records were coded. The 900-paper numbers are planning values, not observations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results" aria-labelledby="results-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">05</span>
+          <span class="rail-label">Results</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Pilot results</p>
+          <h2 id="results-title">Six papers. Three kinds of engagement. One full adoption.</h2>
+          <p>
+            Among the six primary-pair papers, two cite the critique only, three state its specific finding and keep the original evaluation, none use the remediation partially, and one uses it for a main result. The full adopter is <code>whatswrong</code>, which uses HumanEval+ and MBPP+ as main benchmarks and reports pass rates on 164 HumanEval+ samples and 399 MBPP+ samples. Under the rubric that is score 3: the augmented tests support the paper's primary claims and the critique is cited as their basis.
+          </p>
+
+          <figure class="research-figure">
+            <div class="figure-frame">
+              <img src="assets/figures/fig3_pilot_scores.svg" width="900" height="440" alt="Stacked bar chart of pilot adoption scores. Primary-pair papers: two citation-only, three acknowledged, none partial, one full. The all-pair set adds one acknowledged and one citation-only GSM1k case.">
+            </div>
+            <figcaption>
+              <span><strong>Figure 3.</strong> Adoption scores for the six primary-pair papers and the eight all-pair papers. The all-pair set adds two GSM1k secondary cases.</span>
+              <span class="figure-source">Source data: <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/manuscript/figures/fig3_pilot_scores.csv">fig3_pilot_scores.csv</a></span>
+            </figcaption>
+          </figure>
+
+          <div class="table-block">
+            <p class="table-caption" id="t5-caption"><span class="table-no">Table 4</span> Primary-pair adoption-score distribution.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-labelledby="t5-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col" class="num">Score</th>
+                    <th scope="col">Label</th>
+                    <th scope="col" class="num">n</th>
+                    <th scope="col" class="num">Share</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="num">0</td><td>Citation only</td><td class="num">2</td><td class="num">33.3%</td></tr>
+                  <tr><td class="num">1</td><td>Acknowledged</td><td class="num">3</td><td class="num">50.0%</td></tr>
+                  <tr><td class="num">2</td><td>Partial adoption</td><td class="num">0</td><td class="num">0.0%</td></tr>
+                  <tr><td class="num"><strong>3</strong></td><td><strong>Full adoption</strong></td><td class="num"><strong>1</strong></td><td class="num"><strong>16.7%</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">All eight eligible papers, including the two GSM1k secondary cases, split 3 citation-only, 4 acknowledged, 0 partial, and 1 full.</p>
+          </div>
+
+          <p>
+            The all-pair set adds two GSM1k cases: one acknowledged and one citation-only. Full adoption remains 1/8, or 12.5%. Independent remediation is more common than adoption: 3 of 6 primary-pair papers and 4 of 8 all-pair papers did something about the benchmark's defect without using the critique's artifact.
+          </p>
+
+          <div class="table-block">
+            <p class="table-caption" id="t6-caption"><span class="table-no">Table 5</span> Pair-specific pilot results.<span class="scroll-hint">Scroll sideways for all columns.</span></p>
+            <div class="table-wrap table--wide" tabindex="0" role="region" aria-labelledby="t6-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Critique</th>
+                    <th scope="col" class="num">Eligible n</th>
+                    <th scope="col" class="num">Full (3)</th>
+                    <th scope="col" class="num">Full %</th>
+                    <th scope="col">Wilson 95% CI</th>
+                    <th scope="col" class="num">Acknowledged or better</th>
+                    <th scope="col" class="num">Independent remediation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>EvalPlus</td><td class="num">3</td><td class="num">1</td><td class="num">33.3%</td><td>6.1–79.2%</td><td class="num">2</td><td class="num">0</td></tr>
+                  <tr><td>SWE-bench+</td><td class="num">3</td><td class="num">0</td><td class="num">0.0%</td><td>0.0–56.1%</td><td class="num">2</td><td class="num">3</td></tr>
+                  <tr><td>GSM1k (secondary)</td><td class="num">2</td><td class="num">0</td><td class="num">0.0%</td><td>0.0–65.8%</td><td class="num">1</td><td class="num">1</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">The EvalPlus and SWE-bench+ rows each contain three papers. The observed risk difference is 33.3 percentage points, but the intervals overlap almost completely. The contrast is descriptive and not powered.</p>
+          </div>
+
+          <div class="table-block">
+            <p class="table-caption" id="t7-caption"><span class="table-no">Estimates</span> Pilot proportions with Wilson 95% intervals.<span class="scroll-hint">Scroll sideways for all columns.</span></p>
+            <div class="table-wrap table--wide" tabindex="0" role="region" aria-labelledby="t7-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Quantity</th>
+                    <th scope="col" class="num">k</th>
+                    <th scope="col" class="num">n</th>
+                    <th scope="col" class="num">Estimate</th>
+                    <th scope="col">Wilson 95% CI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Full adoption, primary pairs</td><td class="num">1</td><td class="num">6</td><td class="num">16.7%</td><td>3.0–56.4%</td></tr>
+                  <tr><td>Full adoption, all pairs</td><td class="num">1</td><td class="num">8</td><td class="num">12.5%</td><td>2.2–47.1%</td></tr>
+                  <tr><td>Acknowledged or better, primary pairs</td><td class="num">4</td><td class="num">6</td><td class="num">66.7%</td><td>30.0–90.3%</td></tr>
+                  <tr><td>Citation only, primary pairs</td><td class="num">2</td><td class="num">6</td><td class="num">33.3%</td><td>9.7–70.0%</td></tr>
+                  <tr><td>Independent remediation, primary pairs</td><td class="num">3</td><td class="num">6</td><td class="num">50.0%</td><td>18.8–81.2%</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p>
+            The interval is the result. The 1/6 estimate spans 3.0–56.4%: the pilot is compatible with a very low adoption rate and with a moderately high one. Reporting 16.7% without the interval would overstate what six papers can support. The pre-specified exact-binomial diagnostics give p = 0.534 for the hypothesis that full adoption is below 25% and p = 0.109 for the hypothesis that most papers score 0 or 1. Neither is confirmatory. A non-significant result at n = 6 is not evidence of no effect.
+          </p>
+
+          <h3>The cases behind the scores</h3>
+          <p>
+            The coded cases show why a binary "used / not used" measure would collapse distinct behaviour. Three SWE-bench+ papers recognized the critique without adopting its dataset, and each did something else instead. <code>utboost</code> proposes its own benchmark; <code>schrodinger</code> uses its own repository transformations on SWE-bench Verified; <code>reagent</code> runs an independent leakage analysis. None of them is indifferent to evaluation quality, and none of them diffuses the critique's specific artifact.
+          </p>
+
+          <div class="table-block">
+            <p class="table-caption" id="t8-caption"><span class="table-no">Table 6</span> Coded pilot cases and boundary decisions.<span class="scroll-hint">Scroll sideways for all columns.</span></p>
+            <div class="table-wrap table--cases" tabindex="0" role="region" aria-labelledby="t8-caption">
+              <table aria-describedby="t8-note">
+                <thead>
+                  <tr>
+                    <th scope="col">Paper key</th>
+                    <th scope="col">Critique</th>
+                    <th scope="col">Eligible</th>
+                    <th scope="col" class="num">Score</th>
+                    <th scope="col" class="num">Engagement</th>
+                    <th scope="col">Independent remediation</th>
+                    <th scope="col">Boundary note</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><code class="case-key">whatswrong</code></td><td>EvalPlus</td><td>Yes</td><td class="num"><span class="score score--full">3</span></td><td class="num">2</td><td>No</td><td>Uses HumanEval+ and MBPP+ as main benchmarks, including augmented tests; reports pass rates. Full adoption.</td></tr>
+                  <tr><td><code class="case-key">utboost</code></td><td>SWE-bench+</td><td>Yes</td><td class="num"><span class="score">1</span></td><td class="num">2</td><td>Yes</td><td>Discusses the critique's incorrect-patch finding but proposes its own UTBoost; no SWE-bench+ dataset or protocol adoption.</td></tr>
+                  <tr><td><code class="case-key">schrodinger</code></td><td>SWE-bench+</td><td>Yes</td><td class="num"><span class="score">1</span></td><td class="num">2</td><td>Yes</td><td>Cites SWE-bench+ as an enhancement but uses its own repository transformations on SWE-bench Verified; no SWE-bench+ adoption.</td></tr>
+                  <tr><td><code class="case-key">calibration</code></td><td>EvalPlus</td><td>Yes</td><td class="num"><span class="score">1</span></td><td class="num">1</td><td>No</td><td>States the critique's test-gap finding but evaluates original HumanEval; no augmented tests.</td></tr>
+                  <tr><td><code class="case-key">reagent</code></td><td>SWE-bench+</td><td>Yes</td><td class="num"><span class="score">0</span></td><td class="num">0</td><td>Yes</td><td>Critique appears only in the reference list; the paper's leakage analysis is independent and not presented as following SWE-bench+.</td></tr>
+                  <tr><td><code class="case-key">correctness_internal</code></td><td>EvalPlus</td><td>Yes</td><td class="num"><span class="score">0</span></td><td class="num">0</td><td>No</td><td>Critique appears only in the reference list; evaluates original HumanEval/MBPP without discussing test insufficiency.</td></tr>
+                  <tr><td><code class="case-key">promptcot</code></td><td>GSM1k (secondary)</td><td>Yes</td><td class="num"><span class="score">0</span></td><td class="num">0</td><td>No</td><td>Generic memorization cluster; evaluates GSM8K unchanged. Pilot disagreement: order 1 vs 0; adjudicated 0 under the generic-cluster rule.</td></tr>
+                  <tr><td><code class="case-key">understand_translate</code></td><td>GSM1k (secondary)</td><td>Yes</td><td class="num"><span class="score">1</span></td><td class="num">1</td><td>Yes</td><td>Generic contamination citation; runs its own KSM contamination check, not GSM1k; evaluates GSM8K and translated data unchanged.</td></tr>
+                  <tr><td><code class="case-key">hafix</code></td><td>SWE-bench+</td><td>No</td><td class="num">—</td><td class="num">0</td><td>No</td><td>Cites Aleithan in a generic bug-fixing list; does not evaluate SWE-bench, Lite, or Verified.</td></tr>
+                  <tr><td><code class="case-key">swebenchpro</code></td><td>SWE-bench+</td><td>No</td><td class="num">—</td><td class="num">0</td><td>No</td><td>Evaluates SWE-bench Pro, a derivative, not SWE-bench, Lite, or Verified.</td></tr>
+                  <tr><td><code class="case-key">cweval</code></td><td>EvalPlus</td><td>No</td><td class="num">—</td><td class="num">0</td><td>No</td><td>Evaluates its own CWEval benchmark; cites EvalPlus only as future work.</td></tr>
+                  <tr><td><code class="case-key">demystifying</code></td><td>GSM1k (secondary)</td><td>No</td><td class="num">—</td><td class="num">0</td><td>No</td><td>Cites Zhang et al. in a generic claim; does not evaluate GSM8K or GSM1k.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note" id="t8-note">Ineligible papers receive no 0–3 score; the score field is blank in the source data and shown here as an em dash. Engagement is the rubric's secondary engagement level (0–2).</p>
+          </div>
+
+          <p>
+            The pilot does not show that EvalPlus diffuses better than SWE-bench+. It shows that the EvalPlus side contains the one full adopter and the SWE-bench+ side contains three independent remediations. That is the pattern a cost contrast would predict, but it is also what a small selected sample can produce by chance. The full study is needed before the contrast can be described as a difference.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reliability" aria-labelledby="reliability-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">06</span>
+          <span class="rail-label">Reliability</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Agreement and limits</p>
+          <h2 id="reliability-title">Two LLM passes agreed. That is not human reliability.</h2>
+          <p>
+            The pilot's first coding pass was LLM-assisted. The second pass was another LLM pass with fresh context. Fresh context is not statistical independence, and a shared model family can share its mistakes. These statistics are a rubric-debugging signal, not a measurement-error estimate.
+          </p>
+
+          <div class="caveat">
+            <p class="caveat-label">Do not read these as inter-rater reliability</p>
+            <p>
+              No human second coder participated. The exact model identifier, prompt, temperature, and date were not preserved. The full study must report them and must add human double-coding, calibration, adjudication, and a 10% audit. Without a human coder, a full-study prevalence estimate would carry an unknown measurement error.
+            </p>
+          </div>
+
+          <div class="table-block">
+            <p class="table-caption" id="t9-caption"><span class="table-no">Checks</span> Pilot agreement between two LLM passes.</p>
+            <div class="table-wrap" tabindex="0" role="region" aria-labelledby="t9-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Check</th>
+                    <th scope="col">Result</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Eligibility agreement</td><td>12/12 (100%)</td></tr>
+                  <tr><td>Eligibility κ</td><td>1.00 by convention (no variance)</td></tr>
+                  <tr><td>Ordinal agreement</td><td>7/8 (87.5%)</td></tr>
+                  <tr><td>Ordinal unweighted κ</td><td>0.78</td></tr>
+                  <tr><td>Ordinal linear-weighted κ</td><td>0.86</td></tr>
+                  <tr><td>Observed disagreement</td><td><code>promptcot</code>: first pass 0; second pass proposed 1; adjudicated 0</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">The primary-pair subset had no ordinal disagreements (6/6). With n = 6, that is not a reliability result and is not reported as one.</p>
+          </div>
+
+          <p>
+            Rubric v1.1 made four substantive changes before the results were interpreted: GSM1k became secondary only; generic contamination or leakage mentions became score 0; derivative-only papers became ineligible rather than score 0; and full adoption was restricted to use that supports a main claim. The changes are documented in the repository. They are part of the instrument's development, not a response to the observed distribution.
+          </p>
+
+          <h3>What this pilot cannot support</h3>
+          <ol class="limit-list">
+            <li><span class="limit-no">01</span><span><strong>A prevalence estimate.</strong> The pilot is purposive and small: 29 selected, 12 coded, 6 primary-pair and 8 all-pair eligible. It cannot estimate how often citing papers adopt a remediation.</span></li>
+            <li><span class="limit-no">02</span><span><strong>Human reliability.</strong> No human second coder participated. The κ values are LLM–LLM agreement and do not measure human coding error.</span></li>
+            <li><span class="limit-no">03</span><span><strong>Full-scale results.</strong> The 900-paper study was designed but not executed. The 335-record feasibility cohort was drawn but not coded, and retrieval was halted.</span></li>
+            <li><span class="limit-no">04</span><span><strong>A representative access rate.</strong> The 93.1% pilot access rate was obtained on a selected frame and should not be generalized to the 2,666-paper frame.</span></li>
+            <li><span class="limit-no">05</span><span><strong>Verified execution.</strong> The study measures documented adoption, not whether the artifact ran correctly. A paper can claim HumanEval+ and run HumanEval, or use HumanEval+ silently.</span></li>
+            <li><span class="limit-no">06</span><span><strong>The EvalPlus / SWE-bench+ contrast, or time and venue gradients.</strong> Each primary side has three papers; the coded set is 2025-heavy and venue fields are incomplete.</span></li>
+            <li><span class="limit-no">07</span><span><strong>A complete citation census.</strong> The frame is a Semantic Scholar snapshot. It misses non-indexed work, the 2026 portion is incomplete, and 231 records have future-dated metadata.</span></li>
+            <li><span class="limit-no">08</span><span><strong>Perfect deduplication.</strong> Title clustering can merge distinct works with identical titles. Fourteen multi-variant clusters need manual review before the full study.</span></li>
+            <li><span class="limit-no">09</span><span><strong>Registration or a DOI.</strong> The protocol was not registered. No OSF registration or DOI exists for this draft.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reproduce" aria-labelledby="reproduce-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">07</span>
+          <span class="rail-label">Reproduce</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Code and data</p>
+          <h2 id="reproduce-title">What can be checked, and what cannot.</h2>
+          <p>
+            The repository separates reproducible artifacts from unavailable ones. The frozen frame counts and hashes, pilot flow, score distributions, Wilson intervals, figures, tables, and the sampling script's behaviour on the frozen frame can all be checked without paywalled full texts. The coded papers' full texts, the original LLM prompts and outputs, human reliability, and the full-scale estimates cannot.
+          </p>
+
+          <div class="table-block">
+            <p class="table-caption" id="t10-caption"><span class="table-no">Artifacts</span> Primary files in the research repository.<span class="scroll-hint">Scroll sideways for all columns.</span></p>
+            <div class="table-wrap table--wide" tabindex="0" role="region" aria-labelledby="t10-caption">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Artifact</th>
+                    <th scope="col">What it contains</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/data/citation_frame_2666.csv">Frozen citation frame</a></td><td>2,666 title clusters with identifiers, titles, years, and source labels.</td></tr>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/data/frame_summary.json">Frame summary</a></td><td>Counts, coverage, strata, and SHA-256 hashes.</td></tr>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/pilot/pilot_coding_table.csv">Pilot coding table</a></td><td>The authoritative 12-row coding table with scores and boundary fields.</td></tr>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/rubric_v1.1.md">Rubric v1.1</a></td><td>The frozen instrument, boundary rules, and worked cases.</td></tr>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/PROTOCOL.md">Protocol</a></td><td>The planned full-scale design, stop rule, and analysis plan.</td></tr>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/analysis/pilot_results.md">Pilot analysis</a></td><td>Generated counts, distributions, intervals, and diagnostics.</td></tr>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/reproducibility/checksums.sha256">Checksum manifest</a></td><td>SHA-256 hashes for 27 frozen research artifacts.</td></tr>
+                  <tr><td><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/manuscript/paper.md">Manuscript</a></td><td>The full pilot-based draft, including methods, threats to validity, and references.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p>
+            The reproducibility commands use Python 3.11 or later and the standard library for the pilot analysis. They are run from the repository root:
+          </p>
+
+          <div class="code-block">
+            <div class="code-head">
+              <span>PowerShell · repository root</span>
+              <div class="code-actions">
+                <span class="copy-status" data-copy-status role="status" aria-live="polite"></span>
+                <button class="copy-btn" type="button" data-copy-target="repro-commands">Copy commands</button>
+              </div>
+            </div>
+            <pre id="repro-commands"><code>python scripts/analyze_pilot.py
+python scripts/make_manuscript_tables.py
+python scripts/make_figures.py
+python -m pytest tests -q
+python scripts/verify_checksums.py</code></pre>
+          </div>
+
+          <ul class="status-list">
+            <li><span class="status-mark">Reproducible</span>Frame counts and hashes; pilot flow; score distributions; intervals; figures and tables.</li>
+            <li><span class="status-mark">Tested</span>Integrity, arithmetic, table and figure consistency, manuscript claims, and the site's internal links.</li>
+            <li><span class="status-mark status-mark--none">Not available</span>Full texts; original LLM outputs; human reliability; full-scale estimates; registration.</li>
+          </ul>
+
+          <p>
+            The repository's checksums are recorded over LF-normalized bytes, so verification is stable across Windows, macOS, and Linux. The figures and tables are generated by script; the SVGs are copied into this site without hand-editing. Full texts are not redistributed, and no PDFs, raw LLM outputs, or credentials are committed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="references" aria-labelledby="references-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">08</span>
+          <span class="rail-label">References</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Works cited</p>
+          <h2 id="references-title">References</h2>
+          <p>
+            The reference list follows the manuscript. Links go to the publisher, arXiv, DOI, or dataset record where one exists. Merzah (2026) is unpublished replication material and is labeled as such.
+          </p>
+
+          <ol class="refs">
+            <li>Aleithan, R., Xue, H., Mohajer, M. M., Nnorom, E., Uddin, G., &amp; Wang, S. (2024). <cite>SWE-Bench+: Enhanced Coding Benchmark for LLMs.</cite> arXiv:2410.06992. <a href="https://arxiv.org/abs/2410.06992">https://arxiv.org/abs/2410.06992</a></li>
+            <li>Austin, J., Odena, A., Nye, M., Bosma, M., Michalewski, H., Dohan, D., Jiang, E., Cai, C., Terry, M., Le, Q., &amp; Sutton, C. (2021). <cite>Program Synthesis with Large Language Models.</cite> arXiv:2108.07732. <a href="https://arxiv.org/abs/2108.07732">https://arxiv.org/abs/2108.07732</a></li>
+            <li>Chen, M., Tworek, J., Jun, H., Yuan, Q., Pinto, H. P. de O., Kaplan, J., Edwards, H., Burda, Y., Joseph, N., Brockman, G., et al. (2021). <cite>Evaluating Large Language Models Trained on Code.</cite> arXiv:2107.03374. <a href="https://arxiv.org/abs/2107.03374">https://arxiv.org/abs/2107.03374</a></li>
+            <li>Cohen, J. (1960). A coefficient of agreement for nominal scales. <cite>Educational and Psychological Measurement, 20</cite>(1), 37–46. <a href="https://doi.org/10.1177/001316446002000104">https://doi.org/10.1177/001316446002000104</a></li>
+            <li>Dehghani, M., Tay, Y., Bahri, D., &amp; Metzler, D. (2021). <cite>The Benchmark Lottery.</cite> arXiv:2107.07002. <a href="https://arxiv.org/abs/2107.07002">https://arxiv.org/abs/2107.07002</a></li>
+            <li>GSM1k dataset. (2025). Scale AI. Hugging Face. <a href="https://huggingface.co/datasets/ScaleAI/gsm1k">https://huggingface.co/datasets/ScaleAI/gsm1k</a></li>
+            <li>Jimenez, C. E., Yang, J., Wettig, A., Yao, S., Pei, K., Press, O., &amp; Narasimhan, K. (2023). <cite>SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</cite> arXiv:2310.06770; ICLR 2024. <a href="https://arxiv.org/abs/2310.06770">https://arxiv.org/abs/2310.06770</a></li>
+            <li>Kapoor, S., &amp; Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. <cite>Patterns, 4</cite>(9), 100804. <a href="https://doi.org/10.1016/j.patter.2023.100804">https://doi.org/10.1016/j.patter.2023.100804</a></li>
+            <li>Liu, J., Xia, C. S., Wang, Y., &amp; Zhang, L. (2023). Is Your Code Generated by ChatGPT Really Correct? Rigorous Evaluation of Large Language Models for Code Generation. In <cite>Advances in Neural Information Processing Systems 36</cite> (pp. 21558–21572). <a href="https://doi.org/10.52202/075280-0943">https://doi.org/10.52202/075280-0943</a></li>
+            <li>Merzah, B. M. (2026). <cite>Replication materials for “Cited but Not Used: Documented Adoption and Data Accessibility in 40 Non-English NLP Benchmarks.”</cite> Zenodo. <a href="https://doi.org/10.5281/zenodo.23634794">https://doi.org/10.5281/zenodo.23634794</a> <span class="ref-note">Unpublished replication materials; not peer reviewed.</span></li>
+            <li>OpenAI. (2024). <cite>Introducing SWE-bench Verified.</cite> <a href="https://openai.com/index/introducing-swe-bench-verified/">https://openai.com/index/introducing-swe-bench-verified/</a></li>
+            <li>Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., et al. (2021). The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. <cite>BMJ, 372</cite>, n71. <a href="https://doi.org/10.1136/bmj.n71">https://doi.org/10.1136/bmj.n71</a></li>
+            <li>Reuel, A., Hardy, A., Smith, C., Lamparth, M., Hardy, M., &amp; Kochenderfer, M. J. (2024). <cite>BetterBench: Assessing AI Benchmarks, Uncovering Issues, and Establishing Best Practices.</cite> NeurIPS 2024 Datasets and Benchmarks Track. <a href="https://arxiv.org/abs/2411.12990">https://arxiv.org/abs/2411.12990</a></li>
+            <li>Rogers, E. M. (2003). <cite>Diffusion of Innovations</cite> (5th ed.). Free Press.</li>
+            <li>Small, H. G. (1978). Cited documents as concept symbols. <cite>Social Studies of Science, 8</cite>(3), 327–340. <a href="https://doi.org/10.1177/030631277800800305">https://doi.org/10.1177/030631277800800305</a></li>
+            <li>SWE-bench+ dataset. (2024). Zenodo. <a href="https://doi.org/10.5281/zenodo.13879453">https://doi.org/10.5281/zenodo.13879453</a></li>
+            <li>Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. <cite>Journal of the American Statistical Association, 22</cite>(158), 209–212. <a href="https://doi.org/10.1080/01621459.1927.10502953">https://doi.org/10.1080/01621459.1927.10502953</a></li>
+            <li>Zhang, H., Da, J., Lee, D., Robinson, V., Wu, C., Song, W., Zhao, T., Raja, P., Zhuang, C., Slack, D., Lyu, Q., Hendryx, S., Kaplan, R., Lunati, M., &amp; Yue, S. (2024). <cite>A Careful Examination of Large Language Model Performance on Grade School Arithmetic.</cite> arXiv:2405.00332. <a href="https://arxiv.org/abs/2405.00332">https://arxiv.org/abs/2405.00332</a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cite" aria-labelledby="cite-title">
+      <div class="wrap section-grid">
+        <div class="rail">
+          <span class="section-no">09</span>
+          <span class="rail-label">Cite</span>
+        </div>
+        <div class="content">
+          <p class="eyebrow">Citation</p>
+          <h2 id="cite-title">Cite the draft, not a finding.</h2>
+          <p>
+            This is a pilot-based research draft. If you cite it, describe it as a pilot and do not attribute a prevalence estimate to it. The BibTeX entry below matches the repository's citation metadata and the downloadable file.
+          </p>
+
+          <p class="cite-text">
+            Aman, S. A. (2026). <cite>Does benchmark critique diffuse into evaluation practice? A pilot-based study of EvalPlus and SWE-bench+ adoption</cite> [Pilot-based research draft]. https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/
+          </p>
+
+          <div class="cite-actions">
+            <a class="text-link" href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/manuscript/paper.md">Manuscript <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol">GitHub repository <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="cite.bib" download>Download cite.bib <span class="arrow" aria-hidden="true">↓</span></a>
+            <a class="text-link" href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/issues">Report a correction <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="code-block code-block--bib">
+            <div class="code-head">
+              <span>BibTeX</span>
+              <div class="code-actions">
+                <span class="copy-status" data-copy-status role="status" aria-live="polite"></span>
+                <button class="copy-btn" type="button" data-copy-target="bibtex-entry">Copy BibTeX</button>
+              </div>
+            </div>
+            <pre id="bibtex-entry"><code>@misc{aman2026benchmarkcritique,
+  author       = {Aman, Syed Abdul},
+  title        = {Does Benchmark Critique Diffuse into Evaluation Practice?
+                  A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption},
+  year         = {2026},
+  month        = nov,
+  note         = {Pilot-based research draft; not peer reviewed},
+  howpublished = {\url{https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/}},
+  url          = {https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol}
+}</code></pre>
+          </div>
+
+          <p class="small-note">
+            No DOI or registration record exists. The repository is public; the manuscript is a Markdown draft, not a typeset submission. Please open an issue for factual corrections or broken links.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">A pilot is not a prevalence study.</p>
+          <p class="footer-status">
+            The instrument, frame, and pilot are real. The 900-paper study is a plan. The site reports both without collapsing the difference.
+          </p>
+        </div>
+        <div>
+          <p class="footer-heading">Research</p>
+          <ul class="footer-links">
+            <li><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/manuscript/paper.md">Manuscript</a></li>
+            <li><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/rubric_v1.1.md">Rubric v1.1</a></li>
+            <li><a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/PROTOCOL.md">Protocol</a></li>
+            <li><a href="cite.bib" download>BibTeX</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-heading">Reuse and contact</p>
+          <p class="footer-note">
+            Text and figures: <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/LICENSE-DATA">CC BY 4.0</a>. Code: <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/blob/main/LICENSE">MIT</a>.
+          </p>
+          <p class="footer-note">
+            Corrections and broken links: <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol/issues">open an issue</a>. No analytics, cookies, or third-party scripts.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Draft v0.1 · 13 November 2026 · Not peer reviewed · Not a prevalence estimate</span>
+        <span><a href="#main">Back to top</a> · <a href="https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol">Source</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>
