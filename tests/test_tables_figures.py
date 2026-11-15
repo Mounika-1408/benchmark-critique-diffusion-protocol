@@ -109,8 +109,10 @@ def test_figure3_scores_match_results(root, results):
     assert all_pairs == {k: v for k, v in results["all_pair"]["score_distribution"].items()}
 
 
-def test_manuscript_table_links_exist(root):
+def test_manuscript_tables_are_embedded_and_sources_exist(root):
     paper = (root / "manuscript" / "paper.md").read_text(encoding="utf-8")
+    for number in range(1, 9):
+        assert f"**Table {number}." in paper
     for name in (
         "table1_benchmark_pairs.md",
         "table2_frame_profile.md",
@@ -119,7 +121,6 @@ def test_manuscript_table_links_exist(root):
         "table5_pair_specific.md",
         "table6_coded_cases.md",
     ):
-        assert f"manuscript/tables/{name}" in paper
         assert (root / "manuscript" / "tables" / name).is_file()
     for name in ("fig1_frame_years.svg", "fig2_pilot_flow.svg", "fig3_pilot_scores.svg"):
         assert f"figures/{name}" in paper

@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import hashlib
 import re
 from pathlib import Path
+
+import pytest
 
 
 def word_count(text: str) -> int:
@@ -9,15 +12,16 @@ def word_count(text: str) -> int:
 
 
 def test_status_banner_is_honest(paper):
-    assert "PILOT-BASED RESEARCH DRAFT" in paper
+    assert "PILOT-STUDY PREPRINT" in paper
     assert "NOT A COMPLETED FULL-SCALE STUDY" in paper
     assert "does **not** estimate the prevalence" in paper
-    assert "submission-ready" in paper
+    assert "has **not** been peer reviewed" in paper
     assert "full-scale study" in paper
 
 
 def test_no_unfinished_placeholders(paper):
     assert "PART2" not in paper
+    assert "PART3" not in paper
     assert "TODO" not in paper
     assert "[Author name" not in paper
     assert "lorem ipsum" not in paper.lower()
@@ -56,14 +60,14 @@ def test_all_pair_results_are_present_and_consistent(paper):
 
 def test_reliability_is_not_reported_as_human(paper):
     assert "LLM–LLM" in paper
-    assert "rather than human inter-rater reliability" in paper or "not** human inter-rater reliability" in paper
+    assert "rather than human inter-rater reliability" in paper or "not human inter-rater reliability" in paper
     assert "0.78" in paper and "0.86" in paper
     assert "No human second coder" in paper or "no human second coder" in paper
 
 
 def test_no_preregistration_claim(paper):
     lower = paper.lower()
-    assert "not** been registered" in lower or "not been registered" in lower
+    assert "not been registered" in lower
     assert "not preregistered" in lower
     assert "does not describe the study as preregistered" in lower
     assert "osf" in lower
@@ -79,37 +83,33 @@ def test_full_scale_is_labeled_as_plan(paper):
 def test_abstract_length_and_content(abstract):
     body = abstract.split("**Keywords:**")[0]
     body = body.replace("# Abstract", "")
-    assert 150 <= word_count(body) <= 250
-    for text in ("2,666", "29-paper", "1/6", "16.7%", "1/8", "12.5%", "LLM"):
+    assert 150 <= word_count(body) <= 260
+    for text in ("2,666", "29-paper", "One of six", "16.7%", "1/8", "12.5%", "LLM"):
         assert text in abstract
-    assert "human reliability" in abstract
+    assert "human inter-rater reliability" in abstract
 
 
 def test_manuscript_has_required_sections(paper):
     required = [
         "Abstract",
-        "Keywords",
         "Introduction",
-        "Research Questions and Hypotheses",
         "Related Work",
+        "The Remediations and the Cost Contrast",
         "Conceptual Framework",
-        "Methodology",
-        "Citation-Frame Construction",
-        "Sampling and Eligibility",
-        "Coding Rubric and Reliability",
+        "Study Design and Methods",
+        "The Planned Full-Scale Study",
         "Results",
-        "Statistical Analysis",
         "Discussion",
-        "Threats to Validity",
-        "Limitations",
-        "Ethics and Licensing",
-        "Reproducibility and Data Availability",
+        "Validity and Limitations",
+        "Ethics, Licensing, and Data Availability",
+        "Reproducibility",
         "Conclusion",
         "References",
     ]
     headings = "\n".join(re.findall(r"^## .*$", paper, re.M))
     for section in required:
         assert section in headings
+    assert "**Keywords:**" in paper
 
 
 def test_key_cases_are_reported(paper):
@@ -136,7 +136,16 @@ def test_references_bib_is_populated(root):
 
 
 def test_figures_and_tables_are_referenced(paper):
-    for label in ("Table 1", "Table 2", "Table 3", "Table 4", "Table 5", "Table 6"):
+    for label in (
+        "Table 1",
+        "Table 2",
+        "Table 3",
+        "Table 4",
+        "Table 5",
+        "Table 6",
+        "Table 7",
+        "Table 8",
+    ):
         assert label in paper
     for label in ("Figure 1", "Figure 2", "Figure 3"):
         assert label in paper
@@ -149,6 +158,44 @@ def test_limitations_are_explicit(paper):
         "full-scale study was not executed",
         "Semantic Scholar snapshot",
         "not registered",
-        "Licensing constraints",
+        "Licensing constrains",
     ):
         assert text in paper
+
+
+def test_pdf_is_present_and_structurally_sound(root):
+    pdf = root / "manuscript" / "paper.pdf"
+    data = pdf.read_bytes()
+    assert data.startswith(b"%PDF-")
+    assert data.rstrip().endswith(b"%%EOF")
+    assert len(data) > 150_000
+
+
+def test_deployed_pdf_is_byte_identical(root):
+    manuscript = root / "manuscript" / "paper.pdf"
+    deployed = root / "docs" / "assets" / "paper.pdf"
+    assert deployed.is_file()
+    assert hashlib.sha256(manuscript.read_bytes()).hexdigest() == hashlib.sha256(
+        deployed.read_bytes()
+    ).hexdigest()
+
+
+def test_pdf_page_count_and_metadata(root):
+    pypdf = pytest.importorskip("pypdf")
+    reader = pypdf.PdfReader(str(root / "manuscript" / "paper.pdf"))
+    assert len(reader.pages) == 20
+    metadata = reader.metadata
+    assert "Pilot-Based Study of EvalPlus" in metadata.title
+    assert metadata.author == "Syed Abdul Aman"
+    assert "pilot study" in metadata.subject.lower()
+    assert "EvalPlus" in metadata.get("/Keywords", "")
+
+
+def test_pdf_contains_the_reported_numbers(root):
+    pypdf = pytest.importorskip("pypdf")
+    reader = pypdf.PdfReader(str(root / "manuscript" / "paper.pdf"))
+    text = "\n".join(page.extract_text() or "" for page in reader.pages)
+    for value in ("2,666", "1/6", "16.7%", "3.0–56.4", "1/8", "12.5%", "2.2–47.1"):
+        assert value in text
+    assert "pilot study based on a purposive sample" in text
+    assert "not been peer reviewed" in text

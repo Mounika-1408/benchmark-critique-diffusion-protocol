@@ -146,7 +146,7 @@ def test_required_sections_and_nav_targets(site):
 def test_pilot_status_is_stated_plainly(site):
     _, parser = site
     text = parser.text
-    assert "Pilot draft" in text
+    assert "Pilot preprint" in text
     assert "Not peer reviewed" in text
     assert "This is a pilot, not a prevalence estimate." in text
     assert "The agreement statistics are LLM–LLM" in text
@@ -199,6 +199,18 @@ def test_figures_are_byte_identical_copies(root: Path):
         original = hashlib.sha256((source / name).read_bytes()).hexdigest()
         copy = hashlib.sha256((deployed / name).read_bytes()).hexdigest()
         assert original == copy, f"{name} was modified after copying"
+
+
+def test_pdf_download_is_linked_from_the_site(site):
+    html, parser = site
+    pdf_links = [
+        values
+        for tag, values in parser.tags
+        if tag == "a" and values.get("href") == "assets/paper.pdf"
+    ]
+    assert len(pdf_links) >= 4
+    assert all("download" in values for values in pdf_links)
+    assert html.count("assets/paper.pdf") >= 4
 
 
 def test_local_links_and_assets_resolve(root: Path, site):
@@ -277,6 +289,7 @@ def test_seo_and_social_metadata(site):
     assert record["author"]["name"] == "Syed Abdul Aman"
     assert record["url"] == CANONICAL
     assert record["codeRepository"] == REPO
+    assert record["dateCreated"] == "2026-11-15"
     assert "not peer reviewed" in record["creativeWorkStatus"]
     assert "not a prevalence estimate" in record["creativeWorkStatus"]
     assert "Pilot" in record["creativeWorkStatus"]
@@ -288,7 +301,7 @@ def test_citation_metadata_matches_downloadable_bibtex(root: Path, site):
     assert "@misc{aman2026benchmarkcritique," in bib
     assert "Aman, Syed Abdul" in bib
     assert "year         = {2026}" in bib
-    assert "Pilot-based research draft; not peer reviewed" in bib
+    assert "Pilot-study preprint; not peer reviewed" in bib
     assert CANONICAL in bib
     assert REPO in bib
 
@@ -298,7 +311,7 @@ def test_citation_metadata_matches_downloadable_bibtex(root: Path, site):
 
     citation = "Aman, S. A. (2026)."
     assert citation in parser.text
-    assert "[Pilot-based research draft]" in parser.text
+    assert "[Pilot-study preprint]" in parser.text
 
 
 def test_no_placeholders_or_template_copy(site):

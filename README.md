@@ -4,23 +4,26 @@
 
 **Research website:** [p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol](https://p-r-e-m-i-u-m.github.io/benchmark-critique-diffusion-protocol/)
 
+**Paper (PDF):** [manuscript/paper.pdf](manuscript/paper.pdf) · **Typeset source:** [manuscript/paper.tex](manuscript/paper.tex) · **Markdown:** [manuscript/paper.md](manuscript/paper.md)
+
 <p align="center">
-  <img alt="Status: pilot-based research draft" src="https://img.shields.io/badge/status-pilot--based%20draft-b7791f?style=flat-square">
+  <img alt="Status: pilot-study preprint" src="https://img.shields.io/badge/status-pilot%20preprint-b7791f?style=flat-square">
   <img alt="Python 3.11 or newer" src="https://img.shields.io/badge/python-3.11%2B-17324d?style=flat-square">
-  <img alt="67 tests passing" src="https://img.shields.io/badge/tests-67%20passing-0f766e?style=flat-square">
+  <img alt="Tests passing" src="https://img.shields.io/badge/tests-passing-0f766e?style=flat-square">
   <img alt="Code license: MIT" src="https://img.shields.io/badge/code%20license-MIT-2f855a?style=flat-square">
   <img alt="Data license: CC BY 4.0" src="https://img.shields.io/badge/data%20license-CC%20BY%204.0-2c7a7b?style=flat-square">
 </p>
 
-> **Research status.** This repository is a **pilot-based research draft**, not a
+> **Research status.** This repository hosts a **pilot-study preprint**, not a
 > completed full-scale study. The pilot is purposive and small: six primary-pair
 > and eight all-pair eligible papers. Agreement statistics are **LLM–LLM**, not
 > human inter-rater reliability. The project does **not** estimate population
-> prevalence, does **not** establish causal diffusion, and is **not**
-> submission-ready. See the [manuscript](manuscript/paper.md) and the
+> prevalence, does **not** establish causal diffusion, and has **not** been peer
+> reviewed. Read the [typeset paper](manuscript/paper.pdf), the
+> [Markdown manuscript](manuscript/paper.md), or the
 > [limitations checklist](manuscript/limitations_checklist.md).
 
-**Contents:** [Overview](#overview) · [Research questions](#research-questions) ·
+**Contents:** [Paper (PDF)](#paper-pdf) · [Overview](#overview) · [Research questions](#research-questions) ·
 [Methodology](#methodology) · [Pilot findings](#pilot-findings) ·
 [Figures](#figures) · [Reproducibility](#reproducibility) ·
 [Limitations and status](#limitations-and-status) · [Citation](#citation) ·
@@ -34,6 +37,18 @@
 2,666-cluster frame.*
 
 ---
+
+## Paper (PDF)
+
+The typeset paper is a 20-page A4 preprint with academic typography, eight
+tables, three figures, and a full reference list:
+
+- [**Download the PDF**](manuscript/paper.pdf)
+- [LaTeX source](manuscript/paper.tex)
+- [Markdown manuscript](manuscript/paper.md)
+
+The PDF and Markdown manuscript report the same pilot. Neither is a peer-reviewed
+publication, and neither estimates prevalence in the 2,666-cluster frame.
 
 ## Overview
 
@@ -226,7 +241,7 @@ the SVG files are not hand-edited.
 | 335-record feasibility cohort drawn but not coded | Documents a deviation from the planned design; contributes no result. |
 | 93.1% access rate comes from a purposive frame | The frame-wide access rate is unknown. |
 | Only documented adoption is measured | Execution of the recommended artifact is not verified. |
-| No registration, DOI, peer review, or submission | The manuscript is not submission-ready. |
+| No registration, DOI, or peer review | The paper is a pilot-study preprint, not a peer-reviewed publication. |
 
 ### Component status
 
@@ -235,7 +250,7 @@ the SVG files are not hand-edited.
 | Citation frame | Frozen and verified. |
 | Coding rubric | Frozen at v1.1. |
 | Pilot data and analysis | Complete for 12 coded papers. |
-| Manuscript draft | Complete as a pilot-based draft. |
+| Typeset paper | Complete as a 20-page pilot-study preprint; not peer reviewed. |
 | Full-scale data collection | Not executed. |
 | Human reliability | Not available. |
 | OSF registration / DOI | Not created. |
@@ -264,8 +279,8 @@ Scholar's terms. See [`reproducibility/licensing.md`](reproducibility/licensing.
 If you use this material, cite the repository and preserve its pilot status:
 
 > Aman, S. A. (2026). *Does Benchmark Critique Diffuse into Evaluation Practice?
-> A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption* [Pilot-based research
-> draft]. GitHub.
+> A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption* [Pilot-study
+> preprint]. GitHub.
 > https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol
 
 ```bibtex
@@ -275,7 +290,7 @@ If you use this material, cite the repository and preserve its pilot status:
                   A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption},
   year         = {2026},
   month        = nov,
-  note         = {Pilot-based research draft},
+  note         = {Pilot-study preprint; not peer reviewed},
   howpublished = {\url{https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol}}
 }
 ```
@@ -284,7 +299,9 @@ If you use this material, cite the repository and preserve its pilot status:
 
 | Path | Contents |
 |---|---|
-| [`manuscript/paper.md`](manuscript/paper.md) | Full pilot-based manuscript draft. |
+| [`manuscript/paper.pdf`](manuscript/paper.pdf) | Typeset 20-page pilot-study preprint. |
+| [`manuscript/paper.tex`](manuscript/paper.tex) | LaTeX source for the typeset paper. |
+| [`manuscript/paper.md`](manuscript/paper.md) | Markdown manuscript, consistent with the PDF. |
 | [`manuscript/abstract.md`](manuscript/abstract.md) | Abstract and keywords. |
 | [`manuscript/references.bib`](manuscript/references.bib) | BibTeX entries for cited work. |
 | [`manuscript/tables/`](manuscript/tables/) | Six generated tables in Markdown and CSV. |
