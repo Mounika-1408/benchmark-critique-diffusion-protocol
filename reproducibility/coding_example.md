@@ -65,6 +65,22 @@ However, the pilot notes state that the paper evaluates original HumanEval and d
 
 This matches the score-1 definition:
 
+**Exact rubric rule — Rubric v1.1, §4.3:**
+
+> Use 1 when:
+> - The body states the critique's specific finding (e.g., "EvalPlus shows HumanEval's tests are insufficient"; "Aleithan et al. find solution leakage in SWE-bench").
+> - The paper's evaluation still uses the original benchmark unchanged: original HumanEval/MBPP tests, original SWE-bench/Lite/Verified instances, no filtering, no augmented tests, no contamination-controlled replication.
+> - The critique is used as background, motivation, or a limitation, not as the evaluation protocol.
+
+**Evidence requirement:** quote the sentence that states the finding and the methods sentence/table that shows the original benchmark was used.
+
+**Evidence available in the pilot:**
+
+- Finding quote: "e.g., Liu et al. [13] report gaps in the test sets of HumanEval."
+- Evaluation evidence: The pilot note states that the paper evaluates original HumanEval and uses no augmented tests. This is a coder summary, not a verbatim methods quotation.
+
+**Evidence limitation:** The pilot CSV does not preserve the methods sentence or table required by §4.3. Therefore, the recorded score of 1 is reproduced faithfully, but the complete verbatim evidence requirement cannot be independently audited from the currently preserved pilot material. This limitation should be retained rather than filled with an invented quotation.
+
 - The critique's specific finding is acknowledged.
 - The criticized benchmark is still evaluated without the recommended augmented tests.
 - No partial or full adoption of the recommended EvalPlus practice is recorded.
