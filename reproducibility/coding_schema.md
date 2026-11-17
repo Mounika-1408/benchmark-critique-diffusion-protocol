@@ -82,3 +82,10 @@ The pilot's agreement statistics are LLM–LLM only:
 These are not human inter-rater reliability. No human second coder participated.
 The full study requires human double-coding of at least 20% of eligible papers,
 calibration, adjudication, and a 10% audit.
+
+
+## Worked coding example
+
+See [`coding_example.md`](coding_example.md) for a worked example showing
+eligibility decisions, adoption scoring, counterfactual boundary cases, and
+common coding misreads.

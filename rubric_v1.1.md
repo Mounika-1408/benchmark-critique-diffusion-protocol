@@ -366,3 +366,10 @@ notes,coder_id,coded_at
 - After main coding begins, changes require a dated amendment with reason and impact; affected papers are recoded if the change is material.
 - Do not silently change scoring rules after seeing results.
 - The pilot's v1.0 codes remain in `pilot/pilot_coding_table.csv` for audit; they are not overwritten.
+
+
+
+## Worked coding example
+See [`reproducibility/coding_example.md`](reproducibility/coding_example.md) for a worked example showing
+eligibility decisions, adoption scoring, counterfactual boundary cases, and
+common coding misreads.
