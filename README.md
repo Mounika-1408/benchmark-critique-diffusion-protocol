@@ -8,6 +8,8 @@
 
 **DOI:** [10.5281/zenodo.24245000](https://doi.org/10.5281/zenodo.24245000) · **Zenodo record:** [zenodo.org/records/24245000](https://zenodo.org/records/24245000)
 
+**Citation metadata:** The root `CITATION.cff` powers GitHub's "Cite this repository" panel. Keep it consistent with [`docs/cite.bib`](docs/cite.bib) and the Zenodo record when citation metadata changes.
+
 <p align="center">
   <img alt="Status: pilot-study preprint" src="https://img.shields.io/badge/status-pilot%20preprint-b7791f?style=flat-square">
   <img alt="Python 3.11 or newer" src="https://img.shields.io/badge/python-3.11%2B-17324d?style=flat-square">

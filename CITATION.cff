@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: >-
+  If you use this work, please cite the pilot-study preprint
+  available at https://zenodo.org/records/24245000.
+title: >-
+  Does Benchmark Critique Diffuse into Evaluation Practice?
+  A Pilot-Based Study of EvalPlus and SWE-bench+ Adoption
+authors:
+  - family-names: Aman
+    given-names: Syed Abdul
+    affiliation: Independent Researcher
+version: "1.0"
+date-released: "2026-11-15"
+doi: "10.5281/zenodo.24245000"
+url: "https://zenodo.org/records/24245000"
+repository-code: "https://github.com/P-r-e-m-i-u-m/benchmark-critique-diffusion-protocol"
+license: CC-BY-4.0
+abstract: >-
+  Benchmark critiques identify concrete defects in widely used evaluations and often release a remediation:
+  augmented tests, a filtered dataset, or a stronger protocol. Citation counts record that a critique was noticed,
+  but not whether citing papers changed their own evaluation practice. This paper reports a pilot study of documented
+  adoption for two remediations in code-generation research: EvalPlus, which augments HumanEval and MBPP tests,
+  and SWE-bench+, which releases a filtered 548-instance dataset for SWE-bench. We combine a frozen citation frame
+  of 2,666 title clusters with a purposive 29-paper pilot. Twenty-seven full texts were accessible, 12 papers were
+  coded, 8 were eligible for the all-pair set, and 6 for the two primary pairs. Rubric v1.1 distinguishes citation
+  only (0), acknowledgment (1), partial adoption (2), and full adoption (3), with full adoption requiring the
+  critique's artifact or protocol to support a main claim. One of six primary-pair papers fully adopted the
+  remediation (16.7%; Wilson 95% CI 3.0–56.4); the all-pair estimate was 1/8 (12.5%; 2.2–47.1). Three of six
+  primary-pair papers independently remediated the benchmark without adopting the critique's artifact, and none
+  of the three SWE-bench+ cases used the 548-instance dataset. Agreement was assessed between two LLM coding
+  passes (ordinal κ = 0.78 unweighted, 0.86 linear weighted) and is not human inter-rater reliability. The pilot
+  is purposive and small; it does not estimate population prevalence or identify causal diffusion. Its contribution
+  is a transparent instrument, explicit boundary rules, and evidence that citation, acknowledgment, and adoption
+  are empirically distinct. This is a pilot-study preprint and has not been peer reviewed.
+keywords:
+  - benchmark evaluation
+  - benchmark critique
+  - EvalPlus
+  - SWE-bench+
+  - citation diffusion
+  - meta-research
+  - reproducibility
+  - code generation
